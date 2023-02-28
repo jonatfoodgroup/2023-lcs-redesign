@@ -56,7 +56,7 @@ html body .inline-list li a {
 }
 
 html body .masthead h1 {
-  font-size: 4.2rem;
+  font-size: 4rem !important;
   margin-top: 0;
   margin-bottom: 12px;
   line-height: 1.2;
