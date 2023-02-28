@@ -1,0 +1,246 @@
+
+.container {
+  max-width: 1365px !important;
+  width: 100% !important;
+}
+
+html body .topic-curation {
+  margin: 0 0 20px;
+}
+
+html body .top-bar {
+  padding: 20px;
+}
+
+html body .top-bar img {
+  max-width: 120px;
+}
+
+html body #globalHeader {
+  padding: 12px 0px !important;
+  display: block;
+  background: #4f2170;
+}
+
+html body #globalHeader ul li a {
+ color: #fff !important;
+}
+
+html body #globalHeader ul li a.subscribe-btn {
+  background:#fff;
+  color: #4f2170 !important;
+  padding: 10px 20px;
+}
+
+html body .single-post img {
+  display: none !important;
+}
+
+html body .inline-list {
+ list-style-type: none;
+ margin: 10px 0 0 0;
+  padding: 0;
+}
+
+html body .inline-list li {
+  display: inline-block;
+  margin: 0 0  0 24px;
+}
+
+html body .button:hover {
+  color: #Fff;
+}
+html body .inline-list li a {
+  font-size: 1.4rem;
+  text-decoration: none;;
+}
+
+html body .masthead h1 {
+  font-size: 4.2rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+html body #sidebar .widget h2 {
+  font-size: 1.6rem;
+  margin-top: 20px;
+  display: block;
+}
+
+html body #sidebar .widget {
+  padding: 20px 0px;
+}
+
+html body .bg--pink {
+  background: #E4DDE9;
+}
+
+html body .bg--bordered {
+  border-radius: 6px;
+}
+
+html body .featured-image {
+  border-radius: 4px;
+}
+
+html body .masthead .search-form {
+  margin: 20px 0 0;
+}
+
+html body .topic-curation__title {
+  font-size: 2.4rem;
+  margin: 20px 0 0;
+}
+
+html body .topic-curation__summary {
+  font-size: 1.2rem;
+  margin: 20px 0 20px;
+}
+
+html body .topic-curation .button {
+  font-size: 1rem !important;
+  line-height: 1.4;
+}
+
+html body .post {
+  margin: 0 0 20px;
+}
+
+html body .post .post-title {
+  font-size: 1.8rem;
+  margin: 0 0 10px;
+}
+
+html body .bg--white {
+  background-color: #fff;
+}
+
+html body .tags {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0px !important;
+}
+
+html body .display-posts {
+  max-width: 100%;
+}
+
+html body .display-posts .post {
+  width: 100%;
+  padding: 20px;
+}
+
+html body .display-posts .post .featured-image {
+  width: 100%;
+}
+
+html body .tags li {
+  display: inline-block;
+  margin: 0px 8px 0px 0px;
+}
+
+html body .tags li a {
+  color: #4f2170;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+html .masthead {
+
+}
+
+html body .masthead h1 {
+  margin-top: 40px !important;
+  max-width: 95%;
+}
+
+html body .masthead p {
+  font-size: 1rem;
+  margin: 20px 0 0px;
+}
+
+html body .masthead .bg--white {
+  padding: 30px 0px;
+}
+html body .post-list h3 {
+  font-size: 14px;
+  line-height: 1.4 !important;
+  margin: 0 0 10px;
+  max-width: 90%;
+}
+
+html body .post-list {
+  margin: 10px 0 0;
+}
+html body .post-list .post {
+  margin-bottom: 14px;
+}
+
+html body .masthead input {
+  height: 36px;
+  font-size: 1.1rem;
+  padding: 0 20px;
+  width: 100%;
+  line-height: 1.1;
+}
+
+html body .slick-slide {
+  position: relative;
+}
+
+html body .slick-slide__overlay {
+  width: 100%;
+  padding: 10px;
+}
+
+html body .main-content img:hover {
+  opacity: 0.8;  
+}
+
+html body a img:hover {
+  opacity: .8 !important;
+}
+
+html body .slick-arrow::before {
+  color: #270048 !important;
+  font-size: 24px;
+}
+
+html body .breadcrumbs {
+  list-style-type: none;
+}
+
+html body .breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+}
+
+html body .breadcrumbs li {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  font-size: .75rem;
+  color: #fff !important;
+}
+
+html body .breadcrumbs li a {
+  color: #fff;
+  font-size: .75rem;
+  text-decoration: none;
+}
+
+html body input[type="text"], html body input[type="email"], html body input[type="password"], html body input[type="search"] {
+  height: 36px;
+  font-size: 1.1rem;
+  padding: 0 20px;
+  width: 100%;
+  line-height: 1.1;
+}
+
+@media all and (max-width: 767px) {
+  html body header .logo {
+    max-width: 50%;
+    margin: 20px auto !important;
+    width: 50% !important;
+  }
+}

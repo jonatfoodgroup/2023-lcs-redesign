@@ -1,0 +1,2221 @@
+/* @import url('http://example.com/example_style.css'); */
+/*@font-face {
+    font-family: "Frutiger LT W01-75 Black";
+    font-style: normal;
+    font-weight: normal;
+    src: url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/FrutigerLTStd-Blackwoff.eot") format("eot"), 
+    url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/FrutigerLTStd-Blackwoff.woff") format("woff"), 
+    url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/FrutigerLTStd-Blackwoff.ttf") format("truetype");
+}
+@font-face {
+    font-family: "FrutigerLTW01-55Roman";
+    font-style: normal;
+    font-weight: normal;
+    src: url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/3fbbd6b1-cfa7-4ff0-97ea-af1b2c489f15.eot") format("eot"), 
+    url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/3fbbd6b1-cfa7-4ff0-97ea-af1b2c489f15.woff") format("woff"),
+    url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/3fbbd6b1-cfa7-4ff0-97ea-af1b2c489f15.ttf") format("truetype");
+}
+*/
+/* @import url("//hello.myfonts.net/count/38fa4f"); */
+
+
+@font-face {font-family: 'BwSurco-BlackItalic';src: url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_0_0.eot');src: url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_0_0.eot?#iefix') format('embedded-opentype'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_0_0.woff2') format('woff2'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_0_0.woff') format('woff'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'BwSurco-BoldItalic';src: url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_1_0.eot');src: url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_1_0.eot?#iefix') format('embedded-opentype'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_1_0.woff2') format('woff2'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_1_0.woff') format('woff'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'BwSurco-Black';src: url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_2_0.eot');src: url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_2_0.eot?#iefix') format('embedded-opentype'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_2_0.woff2') format('woff2'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_2_0.woff') format('woff'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'BwSurco-Bold';src: url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_3_0.eot');src: url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_3_0.eot?#iefix') format('embedded-opentype'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_3_0.woff2') format('woff2'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_3_0.woff') format('woff'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'BwSurco-Regular';src: url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_4_0.eot');src: url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_4_0.eot?#iefix') format('embedded-opentype'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_4_0.woff2') format('woff2'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_4_0.woff') format('woff'),url('//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/bwSurcoFont/38FA4F_4_0.ttf') format('truetype');}
+ 
+
+/* @import url('http://example.com/example_style.css'); */
+/*@font-face {
+  font-family: "Frutiger LT W01-75 Black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/FrutigerLTStd-Blackwoff.eot") format("eot"), 
+  url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/FrutigerLTStd-Blackwoff.woff") format("woff"), 
+  url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/FrutigerLTStd-Blackwoff.ttf") format("truetype");
+}
+@font-face {
+  font-family: "FrutigerLTW01-55Roman";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/3fbbd6b1-cfa7-4ff0-97ea-af1b2c489f15.eot") format("eot"), 
+  url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/3fbbd6b1-cfa7-4ff0-97ea-af1b2c489f15.woff") format("woff"),
+  url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/font/3fbbd6b1-cfa7-4ff0-97ea-af1b2c489f15.ttf") format("truetype");
+}*/
+/**
+* CSS @imports must be at the top of the file.      
+* Add them above this section.                             
+*/
+
+
+
+/* ==========================================================================
+ HS COS Boilerplate v1.5.0                                
+ ========================================================================== */
+
+/* This responsive framework is required for all styles. */
+{% include "hubspot/styles/responsive/required_base.css" %}
+{% include 'Coded files/Custom/page/Foodservice-Dec2015-theme/Foodservice-Dec2015-modules.css' %}
+
+/* These includes are optional, but helpful. */
+{% include "hubspot/styles/patches/recommended.css" %} 
+
+
+
+
+
+/* ==========================================================================
+
+ Index:         
+
+1. BASE STYLES   
+  - Variables
+  - Macros
+  - Base
+  - Typography
+
+2. COS STRUCTURE
+  - Structure
+  - Header
+  - Content
+  - Footer
+
+3. MAIN NAVIGATION
+  - Custom Menu Primary
+  - Mobile Menu
+
+4. TEMPLATE MODULE CLASSES
+  - Common Template Classes
+  - Site Pages
+  - Landing Pages
+  - System Pages
+
+5. COS COMPONENTS
+  - Blog
+  - Forms
+  - Buttons
+
+6. MISCELLANOUS
+
+7. Custom Styling
+
+8. MOBILE MEDIA QUERIES
+
+ ========================================================================== */
+
+
+
+
+
+
+
+
+/* ==========================================================================
+
+
+ 1. BASE STYLES                                             
+
+
+ ========================================================================== */
+
+
+
+
+
+/* ==========================================================================
+ Variables                                               
+ ========================================================================== */
+
+
+/**
+* Find the most consistently used font styles, colors, and container widths 
+* for your site and assign them to the jinja variables below for easy use 
+* and reference. 
+*
+* Apply the variable as shown below.  Ignore the jingja comment tags.
+*
+* {#  property: {{ variableName }};  #}
+*/
+
+/* Colors */
+{% set baseColor      = "#343434" %}   
+{% set linkColor      = "#4F2170" %}    
+{% set linkHover      = "#000" %}    
+{% set accentColor1   = "#666" %}    
+{% set accentColor2   = "#ccc" %}    
+{% set accentColor3   = "#ddd" %}  
+
+/* Typography */
+{% set baseFontFamily    = "BwSurco-Regular, Arial,Helvetica,sans-serif" %}            /* {# Used on 'body' in 'Base'  |  Ex. "font-family: {{ baseFontFamily }};" #} */
+{% set baseFontSize      = "15px" %}                         /* {# Used on 'body' in 'Base'  |  Ex. "font-size: {{ baseFontSize }};" #} */
+{% set baseLineHeight    = "24px" %}                          /* {# Used on 'body' in 'Base'  |  Ex. "line-height: {{ baseLineHeight }};" #} */
+{% set webFont1          = "BwSurco-Regular, Helvetica, Arial, Sans-serif" %} /* {# Ex. "font-family: {{ webFont1 }};" #} */
+
+/* Containers */
+{% set maxWidth = "1220px" %} /* Used on '.page-center' in 'Base' and in the 'Portrait tablet to landscape and desktop' media query */
+
+
+
+
+/* ==========================================================================
+ Macros                                                  
+ ========================================================================== */
+
+
+/** 
+* Create jinja macros for CSS3 properties that need browser prefixes.
+*
+* Apply the style as shown below on it's own CSS property line.  
+* Ignore the jinja comment tags. 
+*
+* {#  {{ variableName("values") }}  #}
+*/
+
+{% macro transition(value) -%} 
+-webkit-transition: {{ value }};
+-moz-transition: {{ value }};
+-o-transition: {{ value }};
+-ms-transition: {{ value }};
+transition: {{ value }};
+{%- endmacro %} 
+
+/** 
+* Example of how to apply the above macro (ignore the jinja comment tags):
+*
+* a {
+*   color: red;
+*   font-size: 12px;
+*   {#  {{ transition("all .2s linear") }}  #} 
+* }
+*/
+
+
+
+
+/* ==========================================================================
+ Base                                                    
+ ========================================================================== */
+
+
+/** 
+* Box Sizing
+* 
+* Applies a natural box layout model to all elements so that width and padding 
+* are essentially combined, making responsive styles easier to manage.
+*/
+
+*, *:before, *:after {
+-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+html, body {
+min-height: 100%;
+margin: 0;
+padding: 0;
+} 
+
+/* Website background color and default font styles */
+body {
+background: #fff;
+font-weight:400;
+color: {{ baseColor }};
+font-family: {{ baseFontFamily }};
+font-size: {{ baseFontSize }};
+line-height: {{ baseLineHeight }};
+}
+
+/**
+* Page Center
+*
+* Apply .page-center to full-width modules.
+*/
+
+.container-fluid .row-fluid .page-center {
+float: none;
+max-width: {{ maxWidth }};
+margin: 0 auto;
+padding-left:10px;
+padding-right:10px;
+}
+
+a {    /*font-size:15px;*/     
+    font-family: BwSurco-Bold, sans-serif;
+    text-decoration:underline; 
+    color: {{ linkColor }}; 
+}
+a:hover, a:focus { text-decoration:underline; color: {{ linkHover }}; }
+
+hr {
+color: #ccc;
+background-color: #ccc;
+height: 1px;
+border: none;
+}
+
+/* Highlighted Text 
+::-moz-selection {
+color: #fff;
+background: {{ baseColor }};
+text-shadow: none;
+}
+::selection {
+color: #fff;
+background: {{ baseColor }};
+text-shadow: none;
+}*/
+
+/* Corrects width issues in table elements created via the wysiwyg editor */
+table tr td img {
+   max-width: initial;
+}
+
+
+
+/* ==========================================================================
+ Typography
+ ========================================================================== */
+
+
+/* Basic text */
+p {} 
+small {}
+strong {}
+em {}
+cite {}
+code {}
+pre {}
+
+sup, sub {
+position: relative;
+font-size: 75%;
+line-height: 0;
+vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* Headings */
+.blog #hs_cos_wrapper_blog_subscription_title,.post-header h2 a,h1, h2, h3, h4, h5, h6 {
+ /* color: #0087c6;*/
+  font-family: "BwSurco-Bold";
+font-weight: normal; /*
+  text-transform:uppercase;*/
+}
+
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {}
+
+h1 {
+  margin-top: 0;
+  font-size:24px;
+  line-height:28.8px;
+}
+.post-header h2 a,h2 {
+  font-size:20px;
+  line-height:24px;
+}
+.blog #hs_cos_wrapper_blog_subscription_title,h3 {
+  font-size:20px;
+  line-height:24px;
+}
+h4 {
+  font-size:18px;
+  line-height:21px;
+}
+h5 {
+  font-size:16px;
+  line-height:19px;
+}
+h6 {
+  font-size:14px;
+  line-height:16px;
+}
+
+/* Lists */
+ul, ol {}
+ul ul, ul ol, ol ol, ol ul {}
+li {}
+
+ul.unstyled, ol.unstyled {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+/* Quotes */
+blockquote {}
+blockquote p {}
+blockquote small {}
+blockquote small:before {}
+
+q:before, q:after, blockquote:before, blockquote:after {}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+
+
+ 2. COS STRUCTURE                                            
+
+
+ ========================================================================== */
+
+
+
+
+
+/* ==========================================================================
+ Structure                                               
+ ========================================================================== */
+
+
+/* The outer wrappers of your website */
+.header-container-wrapper, 
+.body-container-wrapper, 
+.footer-container-wrapper {}
+
+/* The inner wrappers of your website */
+.header-container, 
+.footer-container {
+  font-size:12px;
+  line-height:15px;
+      }
+.header-container a, 
+.footer-container a{
+  text-decoration:none;
+}
+.header-container a:hover, 
+.footer-container a:hover{
+  text-decoration:none;
+}
+.custom-header-top-links.custom-header-top-links-spacer-for-lp {
+  padding-top: 15px;
+}
+
+/* ==========================================================================
+ Header
+ ========================================================================== */
+
+
+.header-container-wrapper {}
+.header-container {
+padding-top: 20px;
+}
+
+/* Logo styling */
+.header-container .hs_cos_wrapper_type_logo {}
+.header-container .hs_cos_wrapper_type_logo a {}
+.header-container .hs_cos_wrapper_type_logo a img {}
+
+.custom-header-top-links ul {
+  float: right;
+  margin: 0 43px 0 0;
+  padding: 0;
+}
+.custom-header-top-links ul li {
+display: inline-block;
+margin-right: 7px;
+}
+.custom-header-bottom-wrapper {
+/*   border-top: 15px solid #4f2170; */
+padding-bottom: 18px;
+padding-top: 10px;
+}
+
+.custom-header-top-links ul li a{ 
+  font-family:'Montserrat', sans-serif;
+  font-size:12px;
+  font-weight:400;
+  color:#4f2170;
+  text-decoration:none;
+  line-height:15px;
+}
+
+.custom-logo {
+  margin-top: -5px;
+  padding-left: 30px;
+}
+.header-container .custom-header-search .icon.form_search_btn {
+background: #ffffff url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/Images/SearchIcon.png?t=1449121104630") no-repeat scroll 0 6px;
+border: medium none;
+display: block;
+height: 24px;
+left: 9px;
+margin: 0;
+outline: medium none;
+padding: 0;
+position: absolute;
+top: 1px;
+width: 18px;
+}
+.custom-header-search > input[type="submit"] {
+display: none !important;
+}
+.header-container input[type="text"] {
+border: 1px solid #bbbbbb;
+margin: 0;
+padding: 5px 18px 4px 28px;
+}
+.header-container form {
+position: relative;
+}
+.custom-header-search {
+padding: 25px 44px 0 0;
+}
+.header-container .custom-dropdown {
+background: rgba(0, 0, 0, 0) url("//cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/Images/dropdown1.png?t=1449121104630") no-repeat scroll 0 0;
+display: block;
+float: right;
+padding: 11px 16px 15px 0;
+position: absolute;
+right: 0;
+top: 1px;
+}
+.custom-dropdown-menu {
+display: none;
+}
+
+.header-container input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{color:#000; opacity:1;}
+.header-container input:-moz-placeholder, textarea:-moz-placeholder{color:#000; opacity:1;}
+.header-container input::-moz-placeholder, textarea::-moz-placeholder{color:#000; opacity:1;}
+.header-container input:-ms-input-placeholder, textarea:-ms-input-placeholder{color:#000; opacity:1;}
+
+/* ==========================================================================
+ Content                                                 
+ ========================================================================== */
+
+
+.body-container-wrapper {}
+.body-container {}
+.content-wrapper{
+  padding-top:50px;
+  padding-bottom:50px;
+  padding-left:30px !important;
+  padding-right:30px !important;
+}
+
+.custom-section-header h1 {
+  color: #4F2170;
+  font-family: "Frutiger LT W01-75 Black";
+  font-size: 52px;
+  padding-left: 30px;
+  padding-top: 37px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height:63px;
+  margin-top:0;
+}
+.custom-section-header{
+  background-image: url("http://cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/strip.png");
+  color: #4F2170;
+  background-repeat: no-repeat;
+  min-height:135px !important;
+}
+
+.body-container .hs_cos_wrapper_type_rich_text ul,.widget-module ul,.post-item ul {
+padding: 0 0 0 15px;
+}
+
+/* Unique Pages
+ ========================================================================== */
+
+/* Homepage */
+
+/* Contact Us */
+
+/* About Us */
+
+
+/* Modular & Reusable Components
+ ========================================================================== */
+
+/* Callouts */
+
+/* Social Media Custom Icons */
+
+/* Additional Menus aside from the Main Nav */
+
+
+
+
+/* ==========================================================================
+ Footer
+ ========================================================================== */
+.js-imports{
+  min-height:0 !important;
+}
+
+.footer-container-wrapper {}
+.footer-container {}
+
+.custom-footer-wrapper {
+ /* background-color: #424242;*/
+  border-top: 10px solid #4f2170;
+}
+.custom-footer-copyright p {
+color: #666666;
+float: right;
+font-size: 12px;
+margin: 0 18px 0 65px;
+padding-bottom: 20px;
+}
+
+.custom-footer-wrapper h3 {
+  color: #4f2170;
+  margin:0 0 5px;
+ /* font-family: "Frutiger LT W01-75 Black";*/
+  text-transform:none;
+  /*font-weight:400;*/
+  line-height:24px;
+  font-size: 16px;
+   text-transform: uppercase;
+
+}
+.custom-footer-wrapper ul {
+list-style: outside none none;
+margin: 0;
+padding: 0 0 0 10px;
+}
+.custom-footer-wrapper ul li a{
+  color:#4F2170;
+ /* font-family: "FrutigerLTW01-55Roman";*/
+ font-family: BwSurco-Medium, sans-serif;
+    font-size: 13px;
+  line-height:25.6px;
+} 
+.custom-footer-inner-wrapper {
+padding: 42px 0 46px 65px;
+}
+.custom-footer-col2 ul,.custom-footer-col3 ul{
+padding-bottom: 50px;
+}
+.custom-footer-col2 h3 + ul + h3 + ul,.custom-footer-col3 h3 + ul + h3 + ul,.custom-footer-col5 h3 + ul + h3 + ul {
+padding-bottom: 0;
+}
+.custom-footer-col5 ul{
+padding-bottom: 23px;
+}
+
+.custom-footer-col5 ul li {
+/*  background-image: url("http://cdn2.hubspot.net/hubfs/1714593/Foodservice-Dec2015-theme/Images/ArrowFooter.jpg");
+  background-position: 1px 8px;
+  background-repeat: no-repeat; */
+}
+.custom-footer-col5 ul li a {
+  font-style:italic;
+  margin-left:20px;
+}
+.custom-footer-phoneno,.custom-genral-form {
+/*color: #ffffff;*/
+/*font-family: "FrutigerLTW01-55Roman";*/
+font-size: 15px;
+/*font-weight: 400;*/
+line-height: 24px;
+margin-bottom: 0;
+margin-top: 13px;
+}
+.custom-footer-col1 ul li {
+display: inline-block;
+margin-right: 12px;
+margin-top: 20px;
+}
+.custom-genral-form:hover{
+  color:#fff;
+}
+.custom-footer-logo {
+padding-left: 65px;
+padding-top: 40px;
+}
+.custom-footer-col4 ul li:first-child a {
+display: block;
+line-height: 12px;
+padding-top: 6px;
+}
+.custom-footer-col5 h3 {
+font-style: italic;
+}
+.custom-footer-phoneno span {
+  padding-right: 4px;
+}
+
+
+/* ==========================================================================
+
+
+ 3. MAIN NAVIGATION                                            
+
+
+ ========================================================================== */
+
+
+
+@media (min-width: 768px) {
+.hs-menu-wrapper.hs-menu-flow-horizontal > ul li.hs-item-has-children {
+position: static !important;
+}
+.custom-menu-primary {
+position: relative !important;
+}
+
+.hs-menu-wrapper.hs-menu-flow-horizontal.flyouts > ul li.hs-item-has-children:hover ul.hs-menu-children-wrapper li.hs-item-has-children ul.hs-menu-children-wrapper {
+display: block !important;
+float: left !important;
+left: 0;
+opacity: 1 !important;
+position: relative;
+top: 0;
+visibility: visible !important;
+}
+
+.custom-menu-primary .hs-menu-wrapper > ul > li:hover > ul > li {
+float: left !important;
+position: relative !important;
+width: 20%;
+border-right: 1px solid #e5e5e5;
+padding:5px 0 10px 0;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:hover > ul {
+background: #ffffff none repeat scroll 0 0;
+border-bottom: 8px solid #4F2170;
+/*border-radius: 4px;*/
+box-shadow: 2px -2px 2px #e5e5e5;
+padding-bottom: 20px;
+width: 800px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul >li >a{
+  color: #4F2170;
+  font-size: 12px;
+  line-height: 1;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-weight:700;
+  white-space:normal !important;
+  text-align:center;
+  padding-bottom:10px;
+   cursor: text;
+  }
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul > li > ul > li {
+background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+padding: 12px 20px 7px 22px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul > li > ul > li > a {
+  color: #4F2170;
+  font-size: 12px;
+  text-align:center;
+  white-space:normal !important;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul > li:first-child > ul {
+padding: 19px 0 0;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul > li:first-child > ul > li:nth-child(2) {
+padding: 23px 20px 7px 35px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul > li > ul > li:nth-child(3) {
+padding: 11px 20px 17px 28px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul > li > ul > li:nth-child(4) {
+padding: 17px 20px 7px 40px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul > li:nth-child(4) > ul > li:nth-child(3) > a {
+font-weight: 700;
+text-align: center;
+white-space: normal !important;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul > li:nth-child(4) > ul > li {
+padding: 12px 20px 7px 10px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2) > ul {
+left: 127px !important;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2) > ul > li:first-child > ul {
+padding: 10px 0 0;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2) > ul > li:first-child > ul > li:nth-child(4) {
+padding: 1px 20px 7px 30px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul {
+width: 600px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul > li:first-child,
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul > li:nth-child(3),
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul > li:nth-child(4){
+width: 25%;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul > li:nth-child(2){
+  width:50%;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul > li:nth-child(2) > ul > li {
+float: left;
+width: 46%;
+padding:4px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul > li:nth-child(2) > ul > li > a {
+cursor: text;
+font-size: 11px;
+font-style: italic;
+font-weight: 700;
+line-height: 24px;
+}
+
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul > li:nth-child(2) > ul > li > ul > li > a {
+color: #4F2170;
+font-size: 11px;
+line-height: 11px;
+margin: 0 auto;
+padding: 11px 4px 10px 0;
+text-align: center;
+white-space: normal !important;
+font-weight: 400;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2) > ul > li:nth-child(2) > ul {
+padding-top: 4px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul > li:nth-child(2) > ul > li:last-child > ul {
+margin-top: 2px;
+padding-left: 27px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul > li:nth-child(4) > ul > li > a {
+font-size: 14px;
+font-weight: 700;
+white-space: normal;
+    color: #4f2170;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2):hover > ul > li:nth-child(4) > ul > li > a > img {
+  padding-bottom:4px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(3):hover > ul {
+width: 700px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(3):hover > ul > li {
+width: 33%;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(4) > ul {
+left: 376px !important;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(4):hover > ul {
+width: 200px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(4):hover > ul > li {
+width: 100%;
+}
+
+.custom-menu-primary .hs-menu-wrapper > ul > li:last-child:hover > ul > li {
+width: 100%;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:last-child:hover > ul {
+top: 40px;
+width: 142px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:last-child {
+position: relative !important;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:last-child > ul > li > a {
+cursor: pointer;
+}
+}
+
+
+/* ==========================================================================
+ Custom Menu Primary
+ ========================================================================== */
+
+
+{% set ulColor       = "transparent" %} /* Set ul background color */
+{% set liColor       = "transparent" %} /* Set li background Color */
+{% set aColor        = "#4f2170" %} /* Set link Color */
+{% set aColorHover   = "#4f2170" %} /* Set link Hover Color */
+
+/* Parent List */
+.custom-menu-primary .hs-menu-wrapper > ul{ 
+  display:block !important;
+margin: 25px 0 0 -8px;
+    -webkit-margin-before: 24px;
+background:{{ ulColor }};
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li{
+  display:inline-block;
+  margin-right: 10px;
+  padding:0 5px;
+background:{{ liColor }};
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > a {
+border-bottom: 5px solid rgba(0, 0, 0, 0);
+color: #4f2170;
+/*font-family: 'Montserrat', sans-serif;*/
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+margin-bottom: 15px;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > a:hover{
+color:{{ aColorHover }};
+border-bottom: 5px solid #4F2170;
+}
+
+/* Child List */
+.custom-menu-primary .hs-menu-wrapper > ul ul{}
+.custom-menu-primary .hs-menu-wrapper > ul ul li{
+background:{{ liColor }};
+}
+.custom-menu-primary .hs-menu-wrapper > ul ul li a{
+color:{{ aColor }};
+}
+.custom-menu-primary .hs-menu-wrapper > ul ul li a:hover{
+
+}
+
+/* Override max width on menu links */
+.custom-menu-primary .hs-menu-wrapper > ul li a, 
+.hs-menu-wrapper.hs-menu-flow-horizontal > ul li.hs-item-has-children ul.hs-menu-children-wrapper li a {
+overflow: visible !important;
+max-width: none !important;
+width: auto !important;
+cursor: pointer;
+}
+
+/* Fix menu disappearing on desktop after toggling mobile menu */
+@media screen and (min-width:768px) {
+    .custom-menu-primary .hs-menu-wrapper { 
+        display:block !important;
+    }
+}
+
+
+
+
+/* ==========================================================================
+ Mobile Menu - Hubspot Standard Toggle Menu
+ ========================================================================== */
+
+
+/**
+* Special Note
+*
+* When the menu is open, a class of .mobile-open is applied to the body. You can 
+* use this for custom styling on any element when the menu is in the open position.                     
+*/
+
+.mobile-trigger, .child-trigger{
+  display: none; /* Hide button on Desktop */
+}
+
+@media (max-width: 767px){
+
+
+/* Variables
+   ========================================================================== */
+
+{% set menuColorMobile = "#000000" %}   /* Set Mobile Menu Background Color */
+{% set aColorMobile = "#ffffff" %}      /* Set Link Color */
+{% set aColorHoverMobile = "#ffffff" %} /* Set Link Hover Color */
+
+/* 
+  * Menu Reset
+  *
+  * Remove styling from desktop version of custom-menu-primary. Place any 
+  * additional CSS you want removed from the mobile menu in this reset 
+  */
+
+.custom-menu-primary,
+.custom-menu-primary .hs-menu-wrapper > ul,
+.custom-menu-primary .hs-menu-wrapper > ul li,
+.custom-menu-primary .hs-menu-wrapper > ul li a{
+  display: block;
+  float: none;
+  position: static;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  padding: 0px;
+  margin: 0px;
+  background-image: none;
+  background-color: transparent;
+  border: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow:    none;
+  box-shadow:         none; 
+  max-width: none;
+  width: 100%;
+  height: auto;
+  line-height: 1;  
+  font-weight: normal;
+  text-decoration: none;
+  text-indent: 0px;
+  text-align: left;
+  color:{{aColorMobile}};
+}
+
+
+/* Toggle Button
+   ========================================================================== */
+
+.mobile-trigger {
+background: #ffffff none repeat scroll 0 0;
+border: 1px solid #4f206f;
+border-radius: 4px;
+color: #000000;
+cursor: pointer;
+display: inline-block !important;
+font-size: 16px;
+font-weight: normal;
+height: auto;
+left: 0;
+padding: 7px 10px 8px;
+position: relative;
+text-align: left;
+text-transform: uppercase;
+top: 0;
+width: auto;
+}
+.mobile-trigger:hover{
+
+}
+
+/* Change button when menu is open */
+.mobile-open .mobile-trigger{
+
+}
+
+
+/* Toggle Button Icon
+   ========================================================================== */
+
+.mobile-trigger i{
+  display: inline;
+  position: relative;
+  top: -4px;
+}
+.mobile-trigger i:before, .mobile-trigger i:after{
+  position: absolute;
+  content: '';
+}
+.mobile-trigger i, .mobile-trigger i:before, .mobile-trigger i:after{
+  width: 22px; /* Icon line width */
+  height: 2px; /* Icon line height */
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  background-color:#4f206f; /* Icon color */
+  display: inline-block;
+}
+.mobile-trigger i:before{
+  top: -6px; /* Position top line */
+}
+.mobile-trigger i:after{
+  top: 6px; /* Position bottom line */
+}
+
+.mobile-trigger:hover i, .mobile-trigger:hover i:before, .mobile-trigger:hover i:after,  
+.mobile-open .mobile-trigger i, .mobile-open .mobile-trigger i:before, .mobile-open .mobile-trigger i:after{
+ 
+}
+
+
+/* Child Toggle Button
+   ========================================================================== */
+
+.child-trigger {
+cursor: pointer;
+display: block !important;
+height: 20px !important;
+min-width: 55px !important;
+padding: 0 !important;
+position: absolute;
+right: 0;
+top: 0;
+width: 55px !important;
+}
+.child-trigger:hover{
+  text-decoration: none;
+}
+.child-trigger i{
+  position: relative;
+  top: 50%; /* Centers icon inside button */
+  margin: 0 auto !important;
+}
+.child-trigger i:after{
+  position: absolute;
+  content: '';
+}
+.child-trigger i, .child-trigger i:after{
+  width: 10px; /* Icon line width */
+  height: 1px; /* Icon line height */
+  background-color:#4f206f; /* Icon color */
+  display: block;
+}
+.child-trigger i:after{
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.child-trigger.child-open i:after{
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.child-trigger.child-open i{
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+  
+/* Menu Styles on Mobile Devices
+   ========================================================================== */  
+   
+ .custom-menu-primary.js-enabled{
+     position: relative;
+     padding-top: 44px; /* Makes room for button */
+     text-align:center;
+     
+ }
+
+/* Hide menu on mobile */
+.custom-menu-primary.js-enabled .hs-menu-wrapper,
+.custom-menu-primary.js-enabled .hs-menu-children-wrapper{
+  display: none;
+}  
+
+/* Make child lists appear below parent items */
+.custom-menu-primary ul.hs-menu-children-wrapper{
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: static !important;
+  display: none;
+}
+
+/* Mobile Menu Styles */ 
+.custom-menu-primary.js-enabled .hs-menu-wrapper{
+  width: 100%;
+  position: relative; /**************************************************************/
+  top: 0;             /* Positions the menu to drop from the very top of the screen */
+  left: 0;          /**************************************************************/
+  padding: 0;
+}
+.custom-menu-primary .hs-menu-wrapper{
+  background-color:#fff; /* Menu background color set off global menuColorMobile variable */
+  width: 100%; /* Full screen width */
+}
+
+ /* Level 1 Menu List Styles */
+.custom-menu-primary .hs-menu-wrapper > ul > li{
+  position: relative;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li a{
+border-bottom: 5px solid rgba(0, 0, 0, 0);
+color: #4f2170;
+font-family: Arial,Helvetica,sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+display: inline-block;
+margin-bottom: 15px;
+}
+
+/* Level 1 and Higher Menu List Styles */
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul >li{
+    width:100% !important;
+  
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li > ul > li > ul{
+    width:100% !important;
+  
+}
+
+.custom-menu-primary .hs-menu-wrapper >  ul li a{
+  
+}
+.custom-menu-primary .hs-menu-wrapper > ul li a:hover{
+  
+}
+
+/* Level 2 and Higher Menu List Styles */
+.custom-menu-primary .hs-menu-wrapper > ul ul li{
+  
+}
+.custom-menu-primary .hs-menu-wrapper > ul ul li a{
+  
+}
+
+/* Level 3 and Higher Menu List Styles */
+.custom-menu-primary .hs-menu-wrapper > ul ul ul li a{
+  
+}
+.custom-menu-primary .hs-menu-wrapper > ul ul ul ul li a{
+  
+}
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+
+
+ 4. TEMPLATE MODULE SELECTORS                                         
+
+
+ ========================================================================== */
+
+
+
+
+
+/* Common Template Selectors                                             
+ ========================================================================== */
+
+body.one-column {}
+body.two-column {}
+body.three-column {}
+.content-wrapper {}
+.main-content {}
+.sidebar{}
+.sidebar.right{}
+.sidebar.left{}
+
+/* Common One Column Selectors */
+body.site-page.one-column, 
+body.landing-page.one-column, 
+body.error-template.one-column, 
+body.password-template.one-column, 
+body.subscription-template.one-column {}
+
+body.site-page.one-column .main-content, 
+body.landing-page.one-column .main-content, 
+body.error-template .main-content, 
+body.password-template .main-content, 
+body.subscription-template .main-content {}
+
+/* Common Two Column Selectors */
+body.site-page.two-column, 
+body.landing-page.two-column, 
+body.blog {}  
+
+body.site-page.two-column .main-content, 
+body.landing-page.two-column .main-content, 
+body.blog .blog-content {
+  margin-bottom:35px;
+}
+
+/* Common Three Column Selectors */
+body.site-page.three-column, 
+body.landing-page.three-column {}
+
+body.site-page.three-column .main-content, 
+body.landing-page.three-column .main-content {}
+
+
+/* Site Pages                                            
+ ========================================================================== */
+
+/* One Column Template */
+body.site-page.one-column {}
+body.site-page.one-column .content-wrapper {}
+body.site-page.one-column .main-content {}
+
+/* Two Column Template */
+body.site-page.two-column {}
+body.site-page.two-column .content-wrapper {}
+body.site-page.two-column .main-content {}
+body.site-page.two-column .sidebar.right {}
+
+/* Three Column Template */
+body.site-page.three-column {}
+body.site-page.three-column .content-wrapper {}
+body.site-page.three-column .main-content {}
+
+
+/* Landing Pages                                           
+ ========================================================================== */
+
+/* One Column Template */
+body.landing-page.one-column {}
+body.landing-page.one-column .content-wrapper {}
+body.landing-page.one-column .main-content {}
+
+/* Two Column Template */
+body.landing-page.two-column {}
+body.landing-page.two-column .content-wrapper {}
+body.landing-page.two-column .main-content {}
+body.landing-page.two-column .sidebar.right {}
+
+/* Three Column Template */
+body.landing-page.three-column {}
+body.landing-page.three-column .content-wrapper {}
+body.landing-page.three-column .main-content {}
+
+
+/* System Pages                                          
+ ========================================================================== */
+
+/* Error Templates 404, 500 */
+body.error-template.one-column {}
+body.error-template.one-column .content-wrapper {}
+body.error-template.one-column .main-content {}
+
+/* Password template */
+body.password-template.one-column {}
+body.password-template.one-column .content-wrapper {}
+body.password-template.one-column .main-content {}
+
+/* Email Subscribition templates */
+body.subscription-template.one-column {}
+body.subscription-template.one-column .content-wrapper {}
+body.subscription-template.one-column .main-content {}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+
+
+ 5. COS COMPONENTS                                        
+
+
+ ========================================================================== */
+
+
+
+
+
+/* ==========================================================================
+ Blog                                         
+ ========================================================================== */
+
+
+/* Blog Post and Listing Body Class */
+body.blog {}
+
+/* Blog Post */
+body.hs-blog-post {}
+
+/* Blog Listing */
+body.hs-blog-listing {}
+
+/* Blog Columns Wrapper */
+.blog .content-wrapper {}
+
+
+/* Blog Content Column
+ ========================================================================== */
+
+.blog .blog-content {}
+
+/* Use this to style the main wrapper for the blog listing pages */
+.blog-listing-wrapper {}
+
+/* Use this to style the main wrapper for the blog post pages */
+.blog-post-wrapper {}
+
+/* Blog Title */
+.hs-blog-header h1 {}
+.hs-blog-header h1 a{}
+
+/* Blog Post Title */
+.post-header h2 {}
+.post-header h2 a {}
+
+/* Blog Author and Avatar */
+#hubspot-author_data {}
+#hubspot-author_data a.author-link {}
+#hubspot-author_data .hs-author-avatar {}
+#hubspot-author_data .hs-author-avatar img {}
+
+/* Use this to set up different styling for your blog posts */
+.blog-listing-wrapper .post-listing .post-item {}
+.blog-listing-wrapper .post-listing .post-item .post-body {}
+.blog-post-wrapper .post-body {}
+
+/* Post Featured Image on Listings Page */
+.hs-featured-image-wrapper {}
+.hs-featured-image-wrapper .hs-featured-image-link {}
+.hs-featured-image-wrapper .hs-featured-image-link img.hs-featured-image{
+border-width: 0;
+max-height: 170px;
+max-width: 210px;
+height: auto;
+width: auto;
+display: inline-block !important;
+float: right;
+margin: 20px 0 20px 20px;
+}
+
+/* Read More Link */
+a.more-link {}
+
+/* Blog Topics List */
+#hubspot-topic_data {}
+#hubspot-topic_data a.topic-link {}
+
+/** 
+* Blog Social Sharing icons
+*
+* Overrides defaults to better align icons and prevent overlapping 
+*/
+
+.hs-blog-social-share {
+padding: 10px 0 0 0;
+border-top: 1px solid #cccccc;
+border-bottom: 1px solid #cccccc;
+height: auto;
+}
+
+/** 
+* Blog Commments 
+*
+* Custom styles are listed below, as the COS does not provide default styles.
+*/
+
+#comments-listing {
+border-bottom: 1px solid #ccc;
+margin-bottom: 30px;
+margin-top: 30px;
+}
+.comment {
+margin: 10px 0;
+border-top: 1px solid #ccc;
+padding: 15px 0;
+}
+.comment-date { font-size: 13px; text-align: right; }
+.comment-from { font-weight: bold; }
+.comment-body { padding: 10px 0; }
+
+/* Pagination */
+.blog-pagination {}
+.blog-pagination a {}
+.blog-pagination a.previous-posts-link {}
+.blog-pagination a.all-posts-link {}
+.blog-pagination a.next-posts-link {}
+
+/** 
+* Blog Author Page 
+*
+* ALWAYS be sure to set styles to these selectors, as the COS does not provide default styles
+*/
+
+.hs-author-profile {}
+.hs-author-profile h2.hs-author-name {}
+.hs-author-profile .hs-author-bio {}
+.hs-author-profile .hs-author-avatar {}
+.hs-author-profile .hs-author-avatar img {}
+h3.hs-author-listing-header {}
+
+/** 
+* Blog All Posts Page
+*
+* ALWAYS be sure to set styles to these selectors, as the COS does not provide default styles
+*/
+
+body.hs-content-path-blog-all {}
+div.post-listing-simple {}
+div.post-listing-simple .post-item {}
+h2.post-listing-simple {}
+h2.post-listing-simple a {}
+
+
+/* Blog Sidebar
+ ========================================================================== */
+
+.blog .blog-sidebar {}
+
+/* Blog Modules */
+.blog .blog-sidebar .widget-span {}
+
+
+
+
+/* ==========================================================================
+ Forms
+ ========================================================================== */
+
+
+/* All Global Forms
+ ========================================================================== */
+  
+body .widget-type-google_search input[type="text"],#hs-pwd-widget-password{
+margin-bottom:20px;
+}
+.form-title{    
+ /*color: #0087c6; */
+  font-size: 24px;
+  /* font-weight: bold; */
+  /* margin-bottom: 25px; */
+  /* font-family: Arial,Helvetica,sans-serif; */
+  margin-top: 0;
+  /* line-height: 29px; */
+}
+
+.hs-form-required {
+  color:#ff0000;
+  margin-left:5px;
+}
+.hs-error-msgs.inputs-list {
+color: #ff0000;
+margin:0;
+}
+
+/* Form Field */
+body .hs-form-field {
+  margin-bottom: 20px;
+}
+
+/* Descriptions */
+body .hs-field-desc {}
+
+/* Labels */
+body label {}
+body .hs-form-field > label {
+  font-family:Arial,Helvetica,sans-serif;
+  font-weight:700;
+  line-height:19px;
+  color: #4F2170;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* One Line Inputs */
+body input[type="text"],
+body input[type="password"], 
+body input[type="datetime"], 
+body input[type="datetime-local"], 
+body input[type="date"], 
+body input[type="month"], 
+body input[type="time"], 
+body input[type="week"], 
+body input[type="number"], 
+body input[type="email"], 
+body input[type="url"], 
+body input[type="search"], 
+body input[type="tel"], 
+body input[type="color"],
+body input[type="file"],
+body textarea,
+body select {
+  width: 100%;
+  font-family:MS Shell Dlg \32,arial;
+  font-size:13.3333px;
+  font-weight:400;
+  color:#000000;
+  line-height:17px;
+   max-width:650px;
+  margin-top: 8px;
+  border:1px solid #bbb;
+  padding:5px;
+  display:block !important;
+  
+}
+
+body input[type="text"]:focus,
+body input[type="password"]:focus, 
+body input[type="datetime"]:focus, 
+body input[type="datetime-local"]:focus, 
+body input[type="date"]:focus, 
+body input[type="month"]:focus, 
+body input[type="time"]:focus, 
+body input[type="week"]:focus, 
+body input[type="number"]:focus, 
+body input[type="email"]:focus, 
+body input[type="url"]:focus, 
+body input[type="search"]:focus, 
+body input[type="tel"]:focus, 
+body input[type="color"]:focus,
+body input[type="file"]:focus,
+body textarea:focus,
+body select:focus {
+     outline: 1px dotted #000000;
+}
+
+/* Separate Styles for Multiple Line Inputs */
+body textarea {}
+body textarea:focus {}
+
+/* Separate Styles for Drop Downs */
+body select {}
+body select:focus {}
+
+/* Multiple Selection Inputs */
+body form.hs-form .hs-form-field ul.inputs-list {
+list-style: none;
+padding: 0;
+}
+body form.hs-form .hs-form-field ul.inputs-list li input {}
+body input[type="radio"] {}
+body input[type="checkbox"] {}
+
+/* Required */
+body input:focus:required:invalid, 
+body textarea:focus:required:invalid, 
+body select:focus:required:invalid {}
+
+body input:focus:required:invalid:focus, 
+body textarea:focus:required:invalid:focus, 
+body select:focus:required:invalid:focus {}
+
+/* Placeholder Text */
+::-webkit-input-placeholder { /* Webkit Browsers */
+ /* color: #555;
+ opacity: 1; */
+}
+:-moz-placeholder { /* Firefox 18- */
+ /* color: #555;
+ opacity: 1; */
+}
+::-moz-placeholder { /* Firefox 19+ */
+ /* color: #555;
+ opacity: 1; */
+}
+:-ms-input-placeholder { /* IE10 */
+ /* color: #555;
+ opacity: 1; */
+}
+
+
+/* Form Module
+ ========================================================================== */
+
+/* Form Field */
+.hs_cos_wrapper_type_form .hs-form-field {}
+
+/* Descriptions */
+.hs_cos_wrapper_type_form .hs-field-desc {}
+
+/* Labels */
+.hs_cos_wrapper_type_form label {}
+.hs_cos_wrapper_type_form .hs-form-field > label {}
+
+/* One Line Inputs */
+.hs_cos_wrapper_type_form input[type="text"],
+.hs_cos_wrapper_type_form input[type="password"], 
+.hs_cos_wrapper_type_form input[type="datetime"], 
+.hs_cos_wrapper_type_form input[type="datetime-local"], 
+.hs_cos_wrapper_type_form input[type="date"], 
+.hs_cos_wrapper_type_form input[type="month"], 
+.hs_cos_wrapper_type_form input[type="time"], 
+.hs_cos_wrapper_type_form input[type="week"], 
+.hs_cos_wrapper_type_form input[type="number"], 
+.hs_cos_wrapper_type_form input[type="email"], 
+.hs_cos_wrapper_type_form input[type="url"], 
+.hs_cos_wrapper_type_form input[type="search"], 
+.hs_cos_wrapper_type_form input[type="tel"], 
+.hs_cos_wrapper_type_form input[type="color"],
+.hs_cos_wrapper_type_form input[type="file"],
+.hs_cos_wrapper_type_form textarea,
+.hs_cos_wrapper_type_form select {}
+
+.hs_cos_wrapper_type_form input[type="text"]:focus,
+.hs_cos_wrapper_type_form input[type="password"]:focus, 
+.hs_cos_wrapper_type_form input[type="datetime"]:focus, 
+.hs_cos_wrapper_type_form input[type="datetime-local"]:focus, 
+.hs_cos_wrapper_type_form input[type="date"]:focus, 
+.hs_cos_wrapper_type_form input[type="month"]:focus, 
+.hs_cos_wrapper_type_form input[type="time"]:focus, 
+.hs_cos_wrapper_type_form input[type="week"]:focus, 
+.hs_cos_wrapper_type_form input[type="number"]:focus, 
+.hs_cos_wrapper_type_form input[type="email"]:focus, 
+.hs_cos_wrapper_type_form input[type="url"]:focus, 
+.hs_cos_wrapper_type_form input[type="search"]:focus, 
+.hs_cos_wrapper_type_form input[type="tel"]:focus, 
+.hs_cos_wrapper_type_form input[type="color"]:focus,
+.hs_cos_wrapper_type_form input[type="file"]:focus,
+.hs_cos_wrapper_type_form textarea:focus,
+.hs_cos_wrapper_type_form select:focus {}
+
+/* Separate Styles for Multiple Line Inputs */
+.hs_cos_wrapper_type_form textarea {}
+.hs_cos_wrapper_type_form textarea:focus {}
+
+/* Separate Styles for Drop Downs */
+.hs_cos_wrapper_type_form select {}
+.hs_cos_wrapper_type_form select:focus {}
+
+/* Multiple Selection Inputs */
+.hs_cos_wrapper_type_form form.hs-form .hs-form-field ul.inputs-list li input {}
+.hs_cos_wrapper_type_form input[type="radio"] {}
+.hs_cos_wrapper_type_form input[type="checkbox"] {}
+
+
+/* Blog Comment Form
+ ========================================================================== */
+
+/* Label */
+#comment-form .hs-form-field > label {}
+#comment-form label {}
+
+/* Inputs */
+#comment-form input[type="text"],#comment-form input[type="email"],#comment-form textarea {
+  max-width:100%;
+}
+#comment-form input[type="text"]:focus {}
+
+#comment-form textarea {}
+#comment-form textarea:focus {}
+
+#comment-form input[type="checkbox"] {}
+
+/* Error */
+body .hs-common-error-message {}
+
+
+/* Blog Subscription Form
+ ========================================================================== */
+
+/* Label */
+#hs_form_target_blog_subscription .hs-form-field > label {}
+#hs_form_target_blog_subscription label {}
+
+/* Inputs */
+#hs_form_target_blog_subscription input[type="email"] {}
+#hs_form_target_blog_subscription input[type="email"]:focus {}
+
+#hs_form_target_blog_subscription input[type="radio"], #hs_form_target_blog_subscription input[type="checkbox"] {
+width: auto;
+margin-right: 10px;
+}
+
+
+/* Google Search Form
+ ========================================================================== */
+
+/* Label */
+.widget-type-google_search label {}
+
+/* Input */
+.widget-type-google_search input[type="text"] {}
+.widget-type-google_search input[type="focus"] {}
+
+
+/* Multi Column Form
+ ========================================================================== */
+
+body .hs-form fieldset.form-columns-1 {}
+body .hs-form fieldset.form-columns-1 .hs-form-field {}
+
+body .hs-form fieldset.form-columns-2 {}
+body .hs-form fieldset.form-columns-2 .hs-form-field {}
+
+body .hs-form fieldset.form-columns-3 {}
+body .hs-form fieldset.form-columns-3 .hs-form-field {}
+
+/* Multiple Selection Inputs */
+body form.hs-form .hs-form-field ul.inputs-list li input {}
+body input[type="radio"] {}
+body input[type="checkbox"] {}
+body form.hs-form fieldset { max-width: none; }
+body form.hs-form fieldset .hs-form-field { padding: 0 10px 0 0; }
+body form.hs-form fieldset[class*="form-columns"] .input { margin-right: 0; }
+body form.hs-form fieldset[class*="form-columns"] .hs-input { width: 100%; }
+body form.hs-form fieldset[class*="form-columns"] .hs-input[type="checkbox"] { width: auto; }
+body form.hs-form fieldset.form-columns-3 .hs-form-field { width: 33.33%; }
+
+@media (max-width: 400px) {
+body form.hs-form fieldset .hs-form-field { padding: 0; }
+body form.hs-form fieldset.form-columns-3 .hs-form-field,
+body form.hs-form .form-columns-2 .hs-form-field .hs-input, 
+body form.hs-form .form-columns-3 .hs-form-field .hs-input { width: 100%; }
+body form.hs-form .form-columns-3 .hs-form-field .hs-input[type="checkbox"] { width: auto; }
+}
+
+
+
+
+/* ==========================================================================
+ Buttons                                              
+ ========================================================================== */
+
+
+/* All Global Buttons (Excluding CTAs)
+ ========================================================================== */
+
+body .hs-button.primary,
+body input[type="submit"],
+body input[type="button"] {
+    cursor: pointer;
+    background-color: #fff;
+    border: medium none;
+    /* border-radius: 5px; */
+    color: #4f2170;
+    /* font-family: arial; */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    width: auto;
+    /* line-height: 15px; */
+    display: inline-block;
+  /*  margin-top: 20px;*/
+    text-decoration: none !important;
+    border: 1px solid #CCCCCC;
+    font-family: BwSurco-Bold, sans-serif;
+}
+
+body .hs-button.primary:hover,
+body input[type="submit"]:hover,
+body input[type="button"]:hover {}
+
+body .hs-button.primary:focus,
+body input[type="submit"]:focus,
+body input[type="button"]:focus {}
+
+
+/* Form Module Button
+ ========================================================================== */
+
+.hs_cos_wrapper_type_form .hs-button.primary.large {}
+.hs_cos_wrapper_type_form .hs-button.primary.large:hover {}
+.hs_cos_wrapper_type_form .hs-button.primary.large:focus {}
+
+
+/* Blog Comment Button
+ ========================================================================== */
+#add-comment-button.hs-button.primary {}
+#add-comment-button.hs-button.primary:hover {}
+#add-comment-button.hs-button.primary:focus {}
+
+
+/* Blog Subscription Button
+ ========================================================================== */
+#hs_form_target_blog_subscription .hs-button.primary.large {}
+#hs_form_target_blog_subscription .hs-button.primary.large:hover {}
+#hs_form_target_blog_subscription .hs-button.primary.large:focus {}
+
+
+/* Google Search Button
+ ========================================================================== */
+.widget-type-google_search .hs-button.primary {}
+.widget-type-google_search .hs-button.primary:hover {}
+.widget-type-google_search .hs-button.primary:focus {}
+
+
+/* CTA Buttons
+ ========================================================================== */
+
+/** 
+* Override global CTA styles by wrapping the CTA module in a module group 
+* that has an ID, and use that ID to prefix your CTA selector. Example shown below.
+*
+* All overriding properties require !important tags. 
+*/
+#module-group-ID .cta_button {}
+#module-group-ID .cta_button:hover {}
+#module-group-ID .cta_button:focus {}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+
+
+ 6. MISCELLANOUS                                        
+
+
+ ========================================================================== */
+
+.blog-listing-wrapper .post-listing .post-item {
+border-bottom: 1px solid #cccccc;
+padding: 0 0 20px;
+margin: 0 0 20px;
+}
+.blog-listing-wrapper .post-listing .post-item .post-body {}
+
+.blog-post-wrapper h2, .post-header h2{
+margin-bottom: 20px;
+}
+
+.blog-post-wrapper h2 a, .post-header h2 a{
+text-decoration: none;
+}
+.blog-post-wrapper h2 a:hover, .post-header h2 a:hover{}
+
+#hs_cos_wrapper_blog_subscription_title{}
+
+#comment-form h4{}
+
+#comments-listing {
+border: 1px solid #ccc;
+margin-bottom: 30px;
+margin-top: 30px;
+}
+
+.comment.depth-0 {
+border-bottom: 1px solid #000 !important;
+border-top: medium none !important;
+margin: 0 10px 10px !important;
+padding: 0 15px !important;
+}
+
+.comment-body {
+border-bottom: medium none;
+color: {{ baseColor }};
+display: block;
+font-family: {{ baseFontFamily }};
+font-size: {{ baseFontSize }};
+line-height: {{ baseLineHeight }};
+padding: 0;
+}
+
+.comment-reply-to{
+margin-bottom: 15px;
+}
+
+.comment-from h4 {
+margin: 0;
+padding-top: 15px;
+}
+
+.comment-date {
+color: {{ baseColor }} !important;
+display: block !important;
+text-align: left;
+}
+
+#hubspot-topic_data{
+color: #888888;
+font-weight:700;
+}
+.post-listing #hubspot-author_data{
+margin-top: 0;
+}
+.hs-form .input ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+.hs-form .input ul li{
+padding: 0 !important;
+}
+.custom_listing_comments {
+border: 1px solid #ccc;
+padding: 10px;
+margin: 10px 0;
+}
+.more-link{
+display: inline-block;
+padding-top: 20px;
+}
+.hs-blog-social-share{
+height: auto;
+}
+.blog-template .blog-sidebar .cell-wrapper{
+margin-bottom: 15px;
+}
+.blog-template .blog-sidebar ul{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+.blog-template .blog-sidebar ul li{
+padding: 0 0 10px;
+}
+.blog-pagination .previous-posts-link {
+display: block;
+}
+.blog-pagination .all-posts-link {
+display: block;
+}
+.blog-pagination .next-posts-link {
+display: block;
+}
+#hubspot-author_data .hs-author-avatar {
+max-width: 70px;
+padding: 10px 10px 10px 0;
+}
+
+#hubspot-author_data .hs-author-avatar img {
+height: auto !important;
+max-width: 100%;
+}
+.hs-blog-social-share {
+border-bottom: 1px solid #cccccc;
+border-top: 1px solid #cccccc;
+height: auto;
+margin-top: 10px;
+padding: 10px 0 0;
+}
+#recaptcha_response_field{
+width:auto !important;
+display:inline-block !important;
+}
+#captcha_wrapper > #recaptcha_area {
+margin: 0 0 20px;
+}
+#hubspot-author_data .hs-author-avatar {
+max-width: 70px;
+padding: 10px 10px 10px 0;
+}
+
+#hubspot-author_data .hs-author-avatar img {
+height: auto !important;
+max-width: 100%;
+}
+
+.hs-author-profile .hs-author-avatar img {
+height: auto !important;
+max-width: 100%;
+}
+.hs-author-profile .hs-author-avatar {
+max-width: 70px;
+padding: 10px 10px 10px 0;
+}
+
+
+
+/** 
+* Styles that do not fit into available sections above can go here.
+* For example, one would place 3rd party plugin overriding styles here.
+*
+* This section is NOT for 'Custom' styles.  All custom styles must go in the
+* proper sections above.
+*
+* For instance, custom header and footer styles must go in the HEADER and 
+* FOOTER sections.  Custom styles for anything in-between the header and footer 
+* (such as, styles that are unique to the HOMEPAGE only), must go in the 
+* CONTENT section.
+*/ 
+
+
+
+@media (min-width: 767px) and (max-width:1200px){
+.custom-logo {
+display: block !important;
+float: none !important;
+margin-top: -5px;
+padding-left: 30px;
+width: 50% !important;
+}
+.custom-menu-primary.hidden-phone.js-enabled {
+float: none !important;
+margin: 0 !important;
+padding: 0 0 0 20px;
+position: relative;
+text-align: center;
+width: 100% !important;
+}
+.custom-header-search {
+padding: 0 44px 0 0;
+position: absolute;
+right: 0;
+top: 45px;
+width: 50% !important;
+}
+.custom-header-bottom-wrapper {
+position: relative;
+}
+
+.custom-menu-primary .hs-menu-wrapper > ul > li:nth-child(2) > ul {
+left: 0 !important;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li:hover > ul {
+background: #ffffff none repeat scroll 0 0;
+border-bottom: 8px solid #4F2170;
+border-radius: 4px;
+box-shadow: 2px -2px 2px #e5e5e5;
+padding-bottom: 20px;
+max-width: 800px;
+width:100% !important;
+}
+.custom-menu-primary .hs-menu-wrapper > ul > li {
+float: none !important;
+}
+.custom-menu-primary .hs-menu-wrapper > ul {
+margin: 25px 0 0 0;
+text-align: center;
+}
+.custom-footer-inner-wrapper {
+  padding: 42px 31.5px 46px;
+}
+.custom-footer-logo {
+  padding-left: 31.5px;
+  padding-top: 40px;
+  padding-right: 31.5px;
+}
+.custom-footer-copyright p {
+  margin: 0 31.5px;
+}
+}
+
+/* ==========================================================================
+
+
+ 7. Custom Styles                           
+
+
+ ========================================================================== */
+
+
+.signup-form-section {
+-webkit-box-shadow: 0px 25px 50px -5px rgba(0,0,0,0.46); 
+-moz-box-shadow: 0px 25px 50px -5px rgba(0,0,0,0.46); 
+box-shadow: 0px 25px 50px -5px rgba(0,0,0,0.46);
+padding: 20px;
+margin-right: 20px;
+}
+.signup-form-section-content-img {
+height: 230px;
+}
+.signup-form-section-content-header {
+font-size: 38px; 
+color: #58247b; 
+margin: 0; 
+line-height: 1.5;
+}
+
+/* ==========================================================================
+
+
+ 8. MOBILE MEDIA QUERIES                              
+
+
+ ========================================================================== */
+
+
+
+ 
+
+/* Screen sizes smaller than site maxWidth (.page-center)
+ ========================================================================== */
+
+@media (max-width: {{maxWidth}}) {}
+
+
+/* Landscape tablet and smaller devices
+ ========================================================================== */
+
+@media (max-width: 767px) {
+  .custom-header-top-links ul {
+float: none;
+margin: 0;
+padding: 0 0 20px;
+text-align: center;
+}
+.custom-logo {
+margin-top: 0;
+padding-left: 0;
+text-align: center;
+}
+.main-content{
+  margin-bottom:30px;
+}
+.custom-footer-inner-wrapper {
+padding: 42px 20px 46px;
+}
+.custom-footer-copyright p {
+float: none;
+margin: 0 20px;
+padding-bottom: 20px;
+text-align: center;
+}
+.custom-footer-col1,
+.custom-footer-col2,
+.custom-footer-col3,
+.custom-footer-col4,
+.custom-footer-col5{
+  padding-bottom:40px;
+}
+.custom-footer-logo {
+padding-left: 20px;
+padding-top: 40px;
+}
+.custom-header-search {
+padding: 25px 0 0;
+text-align: center;
+}
+.custom-section-header h1 {
+font-size: 32px;
+line-height: 43px;
+}
+.custom-horizontal-spacer.visible-phone {
+  padding: 0 0 77px;
+}
+  }
+
+
+
+
+  /* fix right column
+  
+  no more ugly post listing */
+  li.hs-postlisting-item {
+    list-style: none;
+    margin-bottom: 1em;
+
+  }
+  li.hs-postlisting-item a {
+    text-decoration: none;
+    font-family: BwSurco-Bold, sans-serif;
+}
+
+.widget-module ul li {
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+
+.widget-module ul li a {
+    text-decoration: none;
+    font-family: BwSurco-Bold, sans-serif;
+}
+.sidebarFeatured a:link {
+    text-decoration: none;
+}
+.sidebarFeatured h3 {
+    font-size: 24px;
+    color: #333333;
+    font-family: BwSurco-Black, sans-serif;
+    text-decoration: none;
+}
+
+
+/* Landscape phones and smaller devices
+ ========================================================================== */
+
+@media (max-width: 479px) {
+.signup-form-section {
+  margin-top:50px;
+}
+.signup-form-section-content-img {
+  height: 100px;
+}
+.signup-form-section-content-header {
+  line-height: 1.2;
+}
+}
+
+/* Middle sizes
+ ========================================================================== */
+
+@media (min-width: 480px) and (max-width: 767px) {
+.signup-form-section {
+  margin-top: 50px;
+}
+}

@@ -1,0 +1,16 @@
+
+.demo-blog-list article {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+  margin-bottom: 4%;
+}
+
+.demo-blog-list article .image-wrap {
+width:130px;
+}
+.demo-blog-list article .image-wrap img {
+  width:100%;
+  padding-right:10px;
+}

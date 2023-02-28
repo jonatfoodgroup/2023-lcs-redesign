@@ -1,0 +1,80 @@
+{# Create a variable to collect all posts #}
+{% set all_posts = [] %}
+
+{# Check if any tags were selected with the tags field #}
+{% if module.tags_to_display.tags|length > 0 %}
+  {# Tags Selected #}
+  {# Create a variable to collect all tags #}
+  {% set blog_tags = [] %}
+
+  {# Append each tag to the blog_tags array #}
+  {% for item in module.tags_to_display.tags %}
+    {% do blog_tags.append( item ) %}
+  {% endfor %}
+
+
+  {# Loop through all posts selected in the blog field #}
+  {% for item in module.blogs_to_display.blogs %}
+
+    {# Get posts for each blog by tags #}
+    {% set posts = blog_recent_tag_posts(item, blog_tags, module.style.general.number_of_posts) %}
+
+    {# Append each post to the all_posts array #}
+    {% for post in posts %}
+      {% do all_posts.append( post ) %}
+    {% endfor %}
+
+  {% endfor %}
+
+{% else %}
+
+  {# Tags Not Selected #}
+  {# Loop through all posts selected in the blog field #}
+  {% for item in module.blogs_to_display.blogs %}
+
+    {# Get posts for each blog #}
+    {% set posts = blog_recent_posts(item, module.style.general.number_of_posts) %}
+
+    {# Append each post to the all_posts array #}
+    {% for post in posts %}
+      {% do all_posts.append( post ) %}
+    {% endfor %}
+
+  {% endfor %}
+
+{% endif %}
+
+
+{% for post in all_posts[:module.style.general.number_of_posts]|sort(true, false, 'publish_date') %}
+<div class="demo-blog-list">
+  
+  <article class="blog-post" aria-label="Blog post summary: {{ post.name }}">
+    <!-- add an image thumb here -->
+    
+   <div>
+      {# -- loop item image -- #}
+          {% if post.post_list_summary_featured_image %}
+            {# image wrapping div -- #}
+            <div class="image-wrap">
+              {# -- image element -- #}
+              <a href="{{ post.absolute_url }}"><img src="{{ post.post_list_summary_featured_image }}" class=""  alt="{{ post.name }}"></a>
+            </div>
+          {% endif %}
+    </div> 
+        <div>
+       {# Publish date #}
+            {% if post.publish_date %}
+          <time class="post-date" datetime="{{ post.publish_date }}">
+            {{ post.publish_date | format_date('long') }}
+          </time>
+        {% endif %}    
+    
+    
+          <h4 class=""><a href="{{ post.absolute_url }}">{{ post.name }}</a></h4>     
+    </div> 
+     
+    
+    
+  </article>
+</div>
+{% endfor %}

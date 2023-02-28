@@ -1,0 +1,18 @@
+.two-col-large-featured-post {
+  margin-top:4%;
+}
+.two-col-large-featured-post article {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 4%;
+  justify-content: space-evenly;
+}
+.two-col-large-featured-post-image-block {
+  margin: 0 1em;
+  flex: 1 0 40%;
+}
+.two-col-large-featured-post-content-block {
+  margin: 0 2em 0 1em;
+}
+

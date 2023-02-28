@@ -1,0 +1,116 @@
+<!--
+  templateType: none
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+
+    {# TODO: Move all Head info to a partial #}
+    {% if page_meta.html_title or pageTitle %}<title>{{ page_meta.html_title or pageTitle }}</title>{% endif %}
+    {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    
+    {# TODO: Move all CSS to a custom includes folder #}
+    {{ require_css(get_asset_url("../../css/main.css")) }}
+    {# This is intended to be used if a template requires template specific style sheets #}
+    {% if template_css %}
+      {{ require_css(get_asset_url(template_css)) }}
+    {% endif %}
+    {{ require_css(get_asset_url("../../css/theme-overrides.css")) }}
+    {{ require_css(get_asset_url("../../css/2021-styles.css")) }}
+    {{ require_css(get_asset_url("../../css/2019-styles.css")) }}
+    {{ require_css(get_asset_url("../../css/jons-styles.css")) }}
+    {{ require_css(get_asset_url("../../css/mega-menu.css")) }}
+    {{ require_css("https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css") }}
+    {{ require_css("https://unpkg.com/aos@next/dist/aos.css") }}
+    {# To see a full list of what is included via standard_header_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
+    {# Include slick slider #}
+    {{ require_css("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css") }}
+    {{ require_css("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css") }}
+
+    {# TODO: Document the standard header includes for data and privacy understanding #}
+    {{ standard_header_includes }}
+  </head>
+  <body>
+    <div class="body-wrapper {{ builtin_body_classes }}">
+
+    {# TODO: Research and define blocks within modules #}
+      {% block header %}
+        {% global_partial path="../partials/header.html" %}
+      {% endblock header %}
+
+
+      {# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+      <main id="main-content" class="body-container-wrapper">
+        {% block body %}
+        {% endblock body %}
+      </main>
+
+      {% block footer %}
+        {% global_partial path="../partials/footer.html" %}
+      {% endblock footer %}
+    </div>
+
+    {{ standard_footer_includes }}
+
+    {# TODO: Consolidate and refactor JS into included files #}
+    {{ require_js(get_asset_url("../../js/main.js")) }}
+    {{ require_js("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js") }}
+    {{ require_js("https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js") }}
+    <script>
+
+      AOS.init({
+        duration: 1200,
+        offset: 200,
+        once: true,
+      });
+      $(document).ready(function(){
+
+        $('.slick-slider').slick({
+          dots: true,
+          infinite: true,
+          autoplaySpeed: 7000,
+          fade:true,
+          speed: 600,
+          slidesToShow: 1,
+          adaptiveHeight: true,
+          autoplay: true,
+        });
+
+       {# get all .display-posts on page and initialize slick slider on each of them with 3 slides #}
+        $('.display-posts').each(function(){
+          $(this).slick({
+            infinite: true,
+            autoplaySpeed: 7000,
+            fade:false,
+            speed: 600,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            arrows: true,
+            responsive: [
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          });
+        });
+      });
+    </script>
+      
+    
+  </body>
+</html>

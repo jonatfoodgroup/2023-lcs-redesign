@@ -1,0 +1,88 @@
+[ {
+  "id" : "a65a5f47-f112-65df-55a4-44254b12dde9",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "5ee7790e-23e8-db19-b4c7-bb537f33aec0",
+    "name" : "general",
+    "display_width" : null,
+    "label" : "Field group",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "a4b78e7b-f56a-6094-a6ec-46867f8d21d1",
+      "name" : "number_of_posts",
+      "display_width" : null,
+      "label" : "Number",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "min" : 1,
+      "max" : 100,
+      "step" : 1,
+      "type" : "number",
+      "default" : 1
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "number_of_posts" : 1
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "general" : {
+      "number_of_posts" : 1
+    }
+  }
+}, {
+  "id" : "c8091904-f0b7-0c5b-b367-aeda141f1391",
+  "name" : "tags_to_display",
+  "display_width" : null,
+  "label" : "Field group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "9ef76c8a-4536-b756-1693-7bd3e2b54dc2",
+    "name" : "tags",
+    "display_width" : null,
+    "label" : "Tag",
+    "required" : false,
+    "locked" : false,
+    "tag_value" : "ALL",
+    "type" : "tag"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "f45f18c9-5fe9-683f-3ce3-203b8b832daf",
+  "name" : "blogs_to_display",
+  "display_width" : null,
+  "label" : "Field group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "d3ed1a38-fbb0-f2e9-2fc3-b01a98b74d0b",
+    "name" : "blogs",
+    "display_width" : null,
+    "label" : "Blog",
+    "required" : false,
+    "locked" : false,
+    "type" : "blog",
+    "default" : 3845524140
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "blogs" : 3845524140
+  }
+} ]

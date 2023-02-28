@@ -1,0 +1,361 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+
+{# Structure from feedback from Lori #}
+
+{# 
+#1. Homepage:  
+Feedback from our call to update:
+-Prioritize Recommended and Newest Content Feature near top of page (remove extra column/clutter)
+-Keep the ‘most popular’ as it’s dynamically built now for each Pillar – so the leading articles for Trends, Operations, Culinary on the homepage are showing based on top views.
+ 
+I'd also like Jon S.' help to write a few bullets, high level summarizing this new experience that we can give the client to socialize on her side as needed.
+ 
+COPY
+Make sure all headlines, copy etc. are added. 
+ 
+IMAGERY
+Add imagery/additional styling as needed. @Matt can you take the lead here and work with Jon?
+ 
+
+ #}
+
+{# TODOS #}
+{# TODO: Whimsical Documentation Link 
+TOC
+- Base layout
+- Blocks
+- Queries and state management
+- HubL macros and re-useable functions
+- Your topics
+- Post list
+- Related posts
+- Popular posts
+- Featured posts
+- Technology posts
+- LTO posts
+- All posts
+- End HubL macros and re-useable functions #}
+
+{# 
+  Base layout
+  
+  Description: This is the base layout for the blog page. It contains the base HTML structure and the blocks that are used to add content to the page.
+
+  Layouts are used to define the structure of a page. They are used to define the HTML structure of a page and the blocks that are used to add content to the page. Layouts are defined in the /src/layouts directory. 
+
+  Learn more about layouts: https://designers.hubspot.com/docs/hubl/layouts-overview
+ #}
+#}
+{% extends "./layouts/base.html" %}
+
+
+{% block body %}
+{# This begins the body which holds blocks that are used to add content to the page. #}
+
+  {# 
+    Blocks
+
+    Blocks are used to add content to a page. They are defined in the /src/blocks directory. 
+
+    Learn more about blocks: https://designers.hubspot.com/docs/hubl/blocks-overview
+
+#}
+
+{% set topicsArr = [
+  {
+    id: "trends",
+    name: "Trends",
+    description: "See which industry trends are hot, which are not, and how you can leverage each to help drive your business forward.",
+    url: "/blog/trends",
+    slug: "trends"
+  },
+  {
+    id: "operations",
+    name: "Operations",
+    description: "Dig into tips and insights from our foodservice industry experts to help you streamline and enhance your service.",
+    url: "/blog/operations",
+    slug: "operations"
+  },
+  {
+    id: "culinary",
+    name: "Culinary",
+    description: "Discover food and flavor trends, exciting menu innovations and delicious inspiration to help you meet consumer demand.",
+    url: "/blog/culinary",
+    slug: "culinary"
+  }
+  ]
+
+%}
+{% set topics = ["trends","operations", "culinary"] %}
+
+      {# An array to use for capturing all currently visible posts on the page #}
+      {% set used_posts = [] %}
+
+      {# Get all posts with a specific tag set #} 
+      {% set tag_posts = blog_recent_tag_posts("default", topics, 12) %} 
+        {% set recent = blog_recent_tag_posts("default", topics,6) %} 
+              
+      {# Get most popular posts for a specific tag #}
+      {% set popular = blog_popular_posts("default", 5, topics[1]) %} 
+      {% set featured = blog_popular_posts("default", 5, topics[0]) %} 
+        {% set technology = blog_popular_posts("default", 5, "technology") %} 
+          {% set ltos = blog_popular_posts("default", 5, "Limited Time Offers (LTOs)") %} 
+    {# End queries and state management #}
+
+    {# Begin HubL macros and re-useable functions #}
+        
+    {# Macro - Add to used posts
+    This is used to track which posts have been displayed on the page already so that when we run additional queries on the page, we don't display the same posts twice.
+    #}
+    {% macro add_to_used_posts(post_id) %}
+      {# Check if tag_post.id already exists in used_posts #}
+      {% if tag_post.id in used_posts %}
+        {# If it does, skip this iteration of the loop #}
+        {% else %}
+        {# If it doesn't, add it to used_posts #}
+        {% do used_posts.append(tag_post.id) %}
+      {% endif %}
+    {% endmacro %}
+
+      {# Macro - Display posts - WIP (count needs to be added to query)
+      
+      A macro for displaying posts that also adds them to used_posts #}
+      {% macro display_posts(posts,count) %}
+        <div class="display-posts">
+        {# Set local state #}
+        {% set delay = 0 %}
+          {% set topicsList = [] %}
+
+        {# Loop through the posts #}
+        {% for tag_post in posts %}
+          {{ add_to_used_posts(tag_post.id) }}
+            <div class="post">
+              {% set delay = delay + 100 %}
+
+              {# A permalink to the blog post #}
+              <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">
+                <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%; height: 200px;">
+                  {# A hidden image for SEO #}
+                  <img
+                    src="{{ tag_post.featured_image }}"
+                    alt="{{tag_post.featured_image_alt_text}}"
+                    style="max-width: 240px; display: none;"
+                  />
+                </div>
+              </a>
+              <div class="post-summary">
+                  <div class="post-title"><h3><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h3></div>          
+              
+                  <div class="meta-description">
+                    {{tag_post.meta_description|trim}}
+                  </div>
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+      {% endmacro %}
+
+      {# Macro - Post list #}
+        {% macro post_list(posts) %}
+          <div class="post-list">
+              
+          {% for tag_post in posts %}
+            <div class="row post top-xs" >
+              <div class="col-xs-3 col-md-3">
+                <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">
+                  <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%;">
+                    <img
+                      src="{{ tag_post.featured_image }}"
+                      alt="{{tag_post.featured_image_alt_text}}"
+                      style="max-width: 100%; visibility: hidden; width: 100%; height: 60px;"
+                    />
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-9 col-md-9">
+                <div class="post-title"><h3><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h3></div>
+              </div>
+            </div>
+          {% endfor %}
+          </div>
+
+        {% endmacro %}
+      {# End post list macro #}
+      {% macro larger_posts(posts) %}
+        <div class="list">
+              
+          {% for tag_post in posts %}
+            <div class="row top-xs" style="margin-bottom: 20px;" >
+              <div class="col-xs-12 col-md-12">
+                <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">
+                  <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%;">
+                    <img
+                      src="{{ tag_post.featured_image }}"
+                      alt="{{tag_post.featured_image_alt_text}}"
+                      style="max-width: 100%; visibility: hidden; width: 100%; height: 160px;"
+                    />
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-12 col-md-12">
+                <div class="post-title"><h3><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h3></div>
+                <p>{{tag_post.publish_date_local_time|datetimeformat("%B %e, %Y") }}</p>
+              </div>
+            </div>
+          {% endfor %}
+          </div>
+      {% endmacro %}
+
+      {% macro single_article(tag_post) %}
+        <div class="row top-xs" style="margin-bottom: 20px;" >
+          <div class="col-xs-12 col-md-12">
+              <div class="post-title"><h3><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h3></div>
+              <p>{{tag_post.publish_date_local_time|datetimeformat("%B %e, %Y") }}</p>
+          </div>
+          <div class="col-xs-12 col-md-12">
+            <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">
+              <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%;">
+                <img
+                  src="{{ tag_post.featured_image }}"
+                  alt="{{tag_post.featured_image_alt_text}}"
+                  style="max-width: 100%; visibility: hidden; width: 100%; height: 160px;"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="row top-xs" style="margin-bottom: 20px;" >
+          <div class="col-xs-12 col-md-12">
+            {{tag_post.post_summary}}
+            <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}" class="button">Read More</a>
+          </div>
+        </div>
+      {% endmacro %}
+
+      {# Macro - Slick slider #}
+      {% macro slick_slider(posts) %}
+        <div class="slick-slider" style="max-width: 90%; margin: 0 auto;">
+          {% for tag_post in posts %}
+            <div class="slick-slide" style="text-align: center">
+              <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">
+                <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%; height: 360px;">
+                  <img
+                    src="{{ tag_post.featured_image }}"
+                    alt="{{tag_post.featured_image_alt_text}}"
+                    style="max-width: 100%; display: none;"
+                  />
+                </div>
+              </a>
+              <div class="slick-slide__overlay">
+              
+              <h2><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h2>
+              <p>{{tag_post.publish_date_local_time|datetimeformat("%B %e, %Y") }}</p>
+              <p>{{tag_post.meta_description|trim}} </p>
+              {# <a href="{{ tag_post.url }}" class="btn btn--primary">Read more</a> #}
+              
+              </div>
+              
+            </div>
+          {% endfor %}
+        </div>
+      {% endmacro %}
+      {# End slick slider #}
+{# End macros #}
+
+  {# Main content #}
+  <section class="main-content">
+  {# Include the Topic Curation Module #}
+  {% include "topic-curation-module" %}
+  {# End Topic Curation Module #}
+
+      <section class="masthead">
+        <div class="container" style="padding: 0px;">
+          <div class="row start-xs center-xs">
+
+            <div class="col-xs-12 col-md-7">
+              <div class="bg--white" data-aos="fade-in">  
+              <div class="row middle-xs center-xs">
+                <div  class="col-xs-12 center-xs">
+                  <h1 style="font-size: 2rem">Where Foodservice Operators Feed Success</h1>
+                  <p style="font-size: 1.4rem;line-height: 1.2; max-width: 90%;">Welcome to Let’s Chat Snacks, your destination for insights, emerging trends and delicious ideas to help grow your business.</p>
+                  <div style="margin-top: 40px; text-align: center;">
+                  <input type="email" placeholder="Your company email" style="float: left; border: 2px solid #4f2170; height: 64px !important; margin: 0px auto; padding: 20px !important; display: inline-block; max-width: 360px; font-size: 1.4rem; font-weight: bold;">
+                  <button class="btn btn--primary" style="display: inline-block; float: left; line-height: 32px; border-radius: 0px;">Subscribe</button>
+                  </div>
+                  <div style="clear: both"></div>
+                </div>
+              </div>
+            </div>
+            </div>            
+          </div>
+        </div>
+      </section>
+
+      <div class="container" style="margin: 40px auto">
+        <div class="row">
+           <div class="col-xs-12 col-md-3">
+              {# <h2>Latest</h2> #}
+              {{ single_article(recent[0]) }}
+            </div>
+            <div class="col-xs-12 col-md-5">
+              {# <h2>Recommended For You</h2> #}
+                {{ slick_slider([recent[1],recent[2],recent[3]]) }}
+            </div>
+            <div class="col-xs-12 col-md-3">
+              {# Query popular posts #}
+              {# GET 3 posts from recent #}
+
+              {{ larger_posts([recent[4],recent[5]]) }}
+            </div>
+        </div>
+      </div>      
+
+      <div class="container" data-aos="fade-up">
+        <div class="row center-xs">
+          <div class="col-xs-12 col-md-10 center-xs">
+            <img src="https://via.placeholder.com/2000x600" style="max-width: 100%; margin: 60px auto !important;">
+          </div>
+        </div>
+      </div>
+
+      {# For each topic, do a blog popular posts query and display the results with display posts #}
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            {% for topic in topicsArr %}
+              <div class="row topic-curation" data-aos="fade-up">
+                <div class="col-xs-12 col-md-3">
+                  <h3>Explore</h3>
+                  <h4 class="topic-curation__title">{{ topic.slug | capitalize }}</h4>
+                  <p class="topic-curation__summary">{{topic.description}}</p>
+                  {# Button to view all posts for topic #}
+                  <a href="https://www.letschatsnacks.com/test-topic-listing?hs_preview=bJjdEKvO-103710825300&topic={{topic.slug}}" class="button">View all {{ topic.slug | capitalize }} posts</a>
+                </div>
+                <div class="col-xs-12 col-md-8 col-md-offset-1">
+                  <div class="row" data-aos="fade-in">
+                  {% set data = blog_popular_posts("default", 10, topic.slug) %} 
+                  {{ display_posts(data,5) }}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <div class="row">
+            <h1>What We're Snacking On</h1>
+            {{ display_posts(recent,10) }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+  {% endblock body %}

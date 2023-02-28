@@ -1,0 +1,7 @@
+{% if is_listing_view %}
+  {% for t in contents_tags %}
+    {% if t.slug == topic %}
+        {{t.name}}
+    {% endif %}
+  {% endfor %}
+{% endif %}

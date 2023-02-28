@@ -1,0 +1,100 @@
+{# A mega menu that is a list of links to other pages. #}
+{# It should have rich media such as video, image, or text capabilities #}
+{# It should allow users to click the left sidebar nav list and switch between Popular, Featured, and other curated topics #}
+{# On mobile, there will be a much more simplified menu instead of the mega menu displayed #}
+
+
+{% set topicsArr = [
+  {
+    id: "trends",
+    name: "Trends",
+    description: "Trends",
+    url: "/blog/trends",
+    slug: "trends",
+    isActive: true
+  },
+  {
+    id: "operations",
+    name: "Operations",
+    description: "Operations",
+    url: "/blog/operations",
+    slug: "operations",
+    isActive: false
+  },
+  {
+    id: "culinary",
+    name: "Culinary",
+    description: "Culinary",
+    url: "/blog/culinary",
+    slug: "culinary",
+    isActive: false
+  }]
+%}
+
+
+
+
+{# Macro - Slick slider #}
+{% macro slick_slider(topic,isActive) %}
+  {% set posts = blog_popular_posts("default", 5, topic) %} 
+    
+
+  <div class="mega-menu__slick-slider">
+  {# Print the posts #}
+    {# Loop over each post and puyt it into an .item div #}
+    {% for post in posts %}
+      <div class="item {{ isActive ? 'active' : '' }}">
+        <div class="row">
+          <div class="col-xs-12 col-md-3">
+            <img style="width: 100%;" src="{{ post.featured_image }}">
+          </div>
+          <div class="col-xs-12 col-md-9">
+            <h3>{{ post.name }}</h3>
+            <p>Test</p>         
+          </div>
+        </div>
+      </div>
+      
+
+    {% endfor %}
+    </div>
+{% endmacro %}
+
+<section class="mega-menu" id="megaMenu">
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-12 col-md-2">
+          {# Fix links with the Hubspot (blocked content) filter #}
+            <ul role="list" class="mega-menu__tabs">
+              <li><a href="javascript://">Popular</a></li>
+              <li><a href="javascript://">Featured</a></li>
+              {# Use topics array to build the mega menu content curation model #}
+              {% for topic in topicsArr %}
+                <li><a href="javascript://">{{ topic.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-xs-12 col-md-10">
+          {% for topic in topicsArr %}
+            {{ slick_slider(topic.slug,topic.isActive) }}
+          {% endfor %}
+          </div>
+      </div>
+  </div>
+</section>            
+
+<script>
+      $(document).ready(function(){
+
+        $('.mega-menu__slick-slider').slick({
+          dots: true,
+          infinite: true,
+          autoplaySpeed: 7000,
+          fade:false,
+          speed: 600,
+          slidesToShow: 2,
+          adaptiveHeight: true,
+          autoplay: true,
+        });       
+      });
+    </script>

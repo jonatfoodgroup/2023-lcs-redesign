@@ -1,0 +1,37 @@
+{% set tag_posts = blog_recent_tag_posts("default", ["menu-strategy"], 3) %}
+
+<div class="post-row">
+  
+{% for tag_post in tag_posts %}
+
+  
+<div>
+        {# -- loop item image -- #}
+          {% if tag_post.post_list_summary_featured_image %}
+            {# image wrapping div -- #}
+            <div class="post-row-image-wrap">
+              {# -- image element -- #}
+              <a href="{{ tag_post.absolute_url }}"><div style="background-image:url({{ tag_post.post_list_summary_featured_image }});" class="bk-image">
+                </div></a>
+            </div>
+          {% endif %}
+
+
+       {# Publish date #}
+            {% if tag_post.publish_date %}
+          <time class="post-date" datetime="{{ tag_post.publish_date }}">
+            {{ tag_post.publish_date | format_date('long') }}
+          </time>
+        {% endif %}    
+    
+    
+          <h3 class=""><a href="{{ tag_post.absolute_url }}">{{ tag_post.name }}</a></h3>  
+             
+<p>{{ tag_post.post_summary|truncatehtml(490) }}</p>
+      <a href="{{ tag_post.absolute_url }}">READ MORE</a>
+
+  
+  </div>
+  
+{% endfor %}
+  </div> 

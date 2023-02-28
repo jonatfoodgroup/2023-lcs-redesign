@@ -1,0 +1,186 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    {% if content.html_title %}
+    <title>{{ content.html_title }}</title>
+    {% endif %}
+    <meta name="description" content="{{ content.meta_description }}" />
+    {{ standard_header_includes }}
+  </head>
+  <body>
+
+  {# Total blog post count for the current blog #}
+  {{ blog_total_post_count }} 
+
+  {# Content query for content by array of landing page, website page or blog posts matching by ids #}
+  {# A list of page or blog post IDs to look up. Up to 100 content objects can be passed. #}
+  {% set contents = content_by_ids([4715624297, 4712623297, 5215624284]) %}
+    <ul>
+    {% for content in contents %}
+        <li>
+            <a href="{{ content.absolute_url }}">{{content.title}}</a>
+        </li>
+
+        {# Other available content properties #}
+        {{ content.blog }}
+        {{ content.campaign }}
+        {{ content.campaign_name }}
+        {{ content.comment_list }}
+        {{{{ content.featured_image }}}}
+        {{ content.featured_image_alt_text }}
+        content
+        {% endfor %}
+    </ul>
+{### Must be on a password protected or membership page to query crm objects
+<!-- by query -->
+  {% set contact = crm_object("contact", "email=contact@company.com", "firstname,lastname", false) %}
+  <!-- by id -->
+  {% set contact = crm_object("contact", 123) %}
+  {{ contact.firstname }}
+  {{ contact.lastname }}
+
+###}
+
+{# 
+You can have dozens of modules, and templates that use shared JavaScript libraries, and not worry about loading those libraries multiple times. To do this you need to use the require_js HubL function. Scripts loaded using this function will only load once per page regardless of how many modules, partials, and the template, requires them.
+ 
+{{ require_js(get_asset_url('/js/jquery-latest.js')) }}
+
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js") }}
+#}
+
+{# 
+A design system is a collection of reusable components that go from very small things like icons to larger ones that may be made up of many of the smaller components. Design systems are popular among growing businesses and often simplify development and make code bases and designs easier to scale. In addition, they also help create a brand identity and a consistent experience for the user. 
+
+There are some key ways that modularization can make life easier for developers. The more you repeat patterns and the less you similar CSS, the easier it is to keep things accessible and the simpler it is to maintain. CMS Hub's components were made to enable building design systems that work for both developers and marketers, composed of different sized building blocks: Themes, templates, partials, dnd areas, sections, and modules - being the smallest.
+
+But what if you need a reusable building block that's smaller than a module, one that can be used in multiple modules and templates? There are a few ways to accomplish this, including HubL macros, or using a JavaScript framework like Vue.js, but today we're going to talk about something that's not platform/framework specific. We're going to use the standard web feature called web components.
+
+ #}
+
+ {# example with business-card.js 
+ 
+ class businessCard extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({ mode: "open" });
+    }
+    connectedCallback() {
+      // You can get the attributes set on the custom element just like you would any other HTML element.
+      let firstName = this.getAttribute("data-first");
+      let lastName = this.getAttribute("data-last");
+      let jobTitle = this.getAttribute("data-title");
+      let imageSrc = this.getAttribute("data-src");
+      // Web components are made of the same HTML, and CSS, you're used to. It's just within a self contained space, called the Shadow DOM. We set the inner HTML of the custom element almost the same as you would with any normal HTML element.
+      this.shadowRoot.innerHTML = ` 
+      <style>
+        /* There are a few different ways to style web components, one way is using a style block inside the shadow DOM.  :host is a pseudoclass targetting the custom element itself. */
+        :host{
+          border-radius:6px;
+          width:500px;
+          max-width:100%;
+          padding:15px;
+          contain: layout;
+          display:inline-flex;
+          flex-flow: row wrap;
+          align-items:center;
+          justify-content:flex-start;
+          gap:20px;
+          box-shadow:2px 3px 7px 0px rgb(0 0 0 / 50%);
+          transition: .2s ease-in;
+        }
+        :host(:hover){
+          box-shadow:4px 3px 7px 2px rgb(0 0 0 / 50%);
+          transform:translateZ(10px);
+        }
+        .avatar{
+          max-width:100%;
+          flex:1;
+          object-fit:cover;
+          aspect-ratio:1/1;
+        }
+        .text{
+          flex:1 1 175px;
+        }
+        .name{
+          margin-bottom:0;
+        }
+        .job-title{
+          margin-bottom:15px;
+          font-weight:bold;
+          color:blue;
+        }
+      </style>
+
+      <img src="${imageSrc}" class="avatar" width="150px" loading="lazy" alt="Photo of ${firstName}">
+      <div class="text">
+        <h3 class="name">${firstName} ${lastName}</h3>
+        <div class="job-title">${jobTitle}</div>
+        <div class="bio"><slot></slot></div> <!-- The slot element, tells the browser, any time someone puts HTML/text inside the the element <business-card>Like this</business-card> place it in this spot in the ShadowDOM -->
+      </div>
+    `;
+  }
+}
+window.customElements.define("business-card", businessCard);
+ #}
+
+ {# To display this 
+ 
+ {{ require_js("../business-card.js") }}
+<business-card data-first="{{ module.first }}" data-last="{{ module.last }}" data-title="{{ module.title }}" data-src="{{ module.avatar.src }}">
+  {{ module.bio }}
+</business-card>
+ #}
+ 
+  
+
+  <h1>Program title</h1>
+
+    {# Nav list of topics as hashtags #}
+    <h2>Topics</h2>
+    <ul>
+      <li><a href="#topic1">Topic 1</a></li>
+      <li><a href="#topic2">Topic 2</a></li>
+      <li><a href="#topic3">Topic 3</a></li>
+      <li><a href="#showMore">Show more</a></li>
+      {# Show more CTA #}
+    </ul>
+
+    {# Topics you're following #}
+    <h2>Topics you're following</h2>
+    <ul>
+      <li><a href="#topic1">Topic 1</a></li>
+      <li><a href="#topic2">Topic 2</a></li>
+    </ul>
+
+    {# Search, add & remove topics #}
+    <h2>Search, add & remove topics</h2>
+    <form>
+      <input type="text" placeholder="Search for topics" id="topicsSearch" />
+      <button>Search</button>
+    </form>
+
+    {# Trending topics #}
+    <h2>Trending topics</h2>
+    <ul>
+      <li><a href="#topic1">Topic 1</a></li>
+      <li><a href="#topic2">Topic 2</a></li>
+      <li><a href="#topic3">Topic 3</a></li>
+    </ul>
+
+
+      {% dnd_area "dnd_area"
+      label="Main section",
+      class="body-container body-container--home"
+      %}
+      
+      {% include_dnd_partial path="../sections/topic-curation.html" %}
+
+    {% end_dnd_area %}
+    </body>
+</html>

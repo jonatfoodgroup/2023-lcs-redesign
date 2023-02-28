@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 100651226968,
+  "label" : "Small Post List",
+  "is_available_for_new_content" : true
+}

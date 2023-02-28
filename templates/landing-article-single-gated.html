@@ -1,0 +1,277 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+    label: Article Single
+
+-->
+{# Notes from Megan & lori #}
+
+{# 
+
+#2. Build these remaining pages:
+Pillar Page (trends/operations/culinary)
+Article Page – gated and non-gated
+If we keep search feature in, need to build the search results page.
+ #}
+{% extends "./layouts/base.html" %}
+
+
+
+{# Get the current post #}
+{% block body %}
+
+  {# GEt the query string vars #}
+{% set query = request.query_dict.id %}
+
+  {# Get the current post by ID 36 #}
+{% set content = content_by_id(query || 103713871535) %}
+
+{% for topic in content.topic_list %}
+  {% if topic.name == 'Operations' %}
+    {% set category = 'operations' %}
+  {% else if topic.name == 'Trends' %}
+    {% set category = 'trends' %}
+  {% else if topic.name == 'Culinary' %}
+    {% set category = 'culinary' %}
+  {% endif %}
+{% endfor %}
+
+
+  {% macro display_posts(posts,count) %}
+    <div class="display-posts">
+    {# Set local state #}
+    {% set delay = 0 %}
+      {% set topicsList = [] %}
+
+    {# Loop through the posts #}
+    {% for tag_post in posts %}
+        <div class="post">
+          {% set delay = delay + 100 %}
+
+          {# A permalink to the blog post #}
+          <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">
+            <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%; height: 200px;">
+              {# A hidden image for SEO #}
+              <img
+                src="{{ tag_post.featured_image }}"
+                alt="{{tag_post.featured_image_alt_text}}"
+                style="max-width: 240px; display: none;"
+              />
+            </div>
+          </a>
+          <div class="post-summary">
+              <div class="post-title"><h3><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h3></div>          
+          
+              <div class="meta-description">
+                {{tag_post.meta_description|trim}}
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+
+  {% endmacro %}
+  {# Macro - Subscription banner  #}
+  {% macro subscription_banner() %}
+    <section class="subscription-banner bg--pink bg--bordered" style="height: 40vh; width: 100%; ">
+      <div class="container">
+        <div class="row middle-xs center-xs" style="height: 40vh">
+          <div class="col-xs-12 col-md-12">
+            <div class="subscription-banner-content">
+              <h1>Subscribe to our newsletter</h1>
+              <p>Get the latest news and insights from the foodservice industry</p>
+              <div class="subscription-form">
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                hbspt.forms.create({
+                region: "na1",
+                portalId: "1714593",
+                formId: "d8a36810-762a-4153-b305-9ede4823d7c9"
+              });
+
+              </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endmacro %}
+
+{# Macro - Post list #}
+{% macro post_list(posts) %}
+  <div class="post-list">
+      
+  {% for tag_post in posts %}
+    {# Ensure the current post is skipped #}
+    {% if tag_post.id == content.id %}
+    
+      {# Else #}
+      {% else %}
+        <div class="row post middle-xs" >
+          <div class="col-xs-3 col-md-3">
+            <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">
+              <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%;">
+                <img
+                  src="{{ tag_post.featured_image }}"
+                  alt="{{tag_post.featured_image_alt_text}}"
+                  style="max-width: 100%; visibility: hidden; width: 100%; height: 60px;"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="col-xs-9 col-md-9">
+            <div class="post-title"><h3><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h3></div>
+          </div>
+        </div>
+        {% endif %}
+    
+  {% endfor %}
+  </div>
+
+{% endmacro %}
+
+{# Macro - Slick slider #}
+{% macro slick_slider(posts) %}
+  <div class="slick-slider">
+    {% for tag_post in posts %}
+      <div class="slick-slide">
+        <a href="{{ tag_post.url }}">
+          <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%; height: 240px;">
+            <img
+              src="{{ tag_post.featured_image }}"
+              alt="{{tag_post.featured_image_alt_text}}"
+              style="max-width: 100%; display: none;"
+            />
+          </div>
+        </a>
+        <div class="slick-slide__overlay">
+        <h3><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h3>
+        <p>{{tag_post.meta_description|trim}} </p>
+        <a href="{{ tag_post.url }}" class="btn btn--primary">Read more</a>
+        
+        </div>
+        
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}
+{# End slick slider #}
+
+{% macro email_capture() %}
+  <section class="email-capture" style="padding: 60px 0px; width: 100%; background: #E4DDE9; border-radius: 6px;">
+    <div class="row middle-xs center-xs">
+      <div class="col-xs-12 col-md-8 center-xs">
+      <p>locked</p>
+        <h2 style="font-size: 2rem; line-height: 1.2;">Hungry for more? Amazing! Just share your email to access the full article.</h2>
+        <p>Don't miss out on the opportunity to increase your operations revenue by signing up for Let's Chat Snacks Operator Enablement tools.</p>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                hbspt.forms.create({
+                region: "na1",
+                portalId: "1714593",
+                formId: "d8a36810-762a-4153-b305-9ede4823d7c9"
+              });
+              </script>
+      </div>
+    </div> 
+  </section>
+{% endmacro %}
+
+
+
+  <section class="subtopic-navigation module bg--pink">
+    <div class="container">
+      <div class="row middle-xs start-xs">
+        <div class="col-xs-12 col-md-12 start-xs">
+          <div class="subtopic-navigation__title">
+            <p style="margin: 0px; padding: 12px 0px; font-size: .8rem;">< Back to home / Topics / <a href="https://www.letschatsnacks.com/test-topic-listing?hs_preview=bJjdEKvO-103710825300&topic={{category}}">{{category}}</a> / <a href="{{ content.absolute_url }}">{{content.title}}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+
+    <section class="article-single layout">
+      <div class="container">
+        <div class="row top-xs">
+          {# Content #}
+          <div class="col-xs-12 col-md-8" id="content">
+            <div class="article-single__title">
+            {# Add post tag above #}
+            <h2 style="text-transform: uppercase; font-size: 1rem; margin-top: 32px;">{{category}}</h2>
+              <h1 style="font-size: 3.4rem; line-height: 1.2; margin-top: 10px;">{{content.title}}</h1>
+              
+            </div>
+            
+            <div class="post-body article-single__body">
+            {# Post summary #}
+            <div class="row middle-xs">
+              <div class="col-xs-12 col-md-12">
+                <p class="article-single__date">{{ content.publish_date_local_time|datetimeformat("%B %e, %Y") }} | ~8 minute read</p>
+                <p>{{content.post_body }}</p>
+                <section class="widget">
+              
+              <h2>Tags in this article</h2>
+              <div class="tags-list">
+                {% for tag in content.tag_list %}
+                  <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
+                {% endfor %}
+              </div>
+            </section>
+            
+                  <div class="post-share">
+                </div>
+              </div>
+              </div>
+            <div class="post-related">
+            <h2 style="margin-top: 30px;">Related Articles</h2>
+            {% set data = blog_popular_posts("default", 10, content.tag_list[0]) %} 
+              {{ display_posts(data,5) }}
+            </div>
+
+            </div>
+            
+          </div>
+          {# End content #}
+          {# Sidebar #}
+          <div class="col-xs-12 col-md-3 col-md-offset-1" id="sidebar">
+          <section class="widget">
+                {{ subscription_banner()}}
+            
+            </section>
+            <section class="widget featured-content-slider">
+              <h2>Most Popular</h2>
+              {# Get most popular posts for a specific tag #}
+            {% set popular = blog_popular_posts("default", 5, content.tag_list[0]) %} 
+              {{ slick_slider(popular) }}
+            </section>
+            
+            
+            <section class="widget recent-articles">
+              <h2>Recent Articles</h2>
+              {% set posts = blog_recent_tag_posts("default", content.tag_list, 7) %} 
+                {{ post_list(posts) }}
+            </section>
+
+            <section class="widget search">
+                <h2>Find something specific</h2>
+                {# Search by keyword across the hubspot blog #}
+                {% module "search_input" path="@hubspot/search_input" %}
+                  {% module "search_results" path="@hubspot/search_results" %}
+                </section>
+                    
+            </div>
+            </section>
+            
+          </div>
+          {# End sidebar #}
+        </div>
+      </div>
+    </section>
+
+    {# Javascript #}
+
+
+{% endblock body %}

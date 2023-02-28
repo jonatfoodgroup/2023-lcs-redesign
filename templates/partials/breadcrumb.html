@@ -1,0 +1,16 @@
+<section class="row" style="padding: 2vh 0px; background: #4E2683">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8">
+          <nav class="breadcrumbs">
+            <ul>
+              <li>You are here:<li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/search">Search</a></li>
+              <li>Results for "{{ request.query_dict.term|escape }}"</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>

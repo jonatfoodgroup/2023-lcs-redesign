@@ -1,0 +1,24 @@
+<!--
+  templateType: search_results_page
+  isAvailableForNewContent: true
+  label: 2023 LCS Search results
+-->
+{% set template_css = "../../css/templates/system.css" %}
+{% extends "./layouts/base.html" %}
+{% set pageTitle = "Search results" %} {# pageTitle is used on system templates for setting a value for the title tag #}
+
+{% block body %}
+  {% include "./partials/mega-menu.html" %}
+  {% include "./partials/breadcrumb.html" %}
+
+  <section class="row" id="mainContent" style="padding: 2vh 0px">
+    <div class="container">
+        <div class="row" style="padding: 10px 0px;">
+          <div class="col-xs-12 col-md-8">
+          {% include "./partials/search-contents.html" %}
+          </div>
+        </div>
+      </div>
+    </section>
+    
+{% endblock body %}

@@ -1,0 +1,13 @@
+html body .mega-menu__tabs {
+  background: #E4DDE9;
+  padding: 10px 0;
+  list-style-type: none;
+}
+
+html body .mega-menu__slick-slider .item.active {
+  opacity: 1;
+}
+
+html body .mega-menu__slick-slider .item {
+  opacity: 0.5;
+}
