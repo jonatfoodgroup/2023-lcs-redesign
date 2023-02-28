@@ -1,18 +1,20 @@
 <!--
-  templateType: responsive-banner
-  label: banner
+  templateType: global_partial
+  label: Responsive Ad Banner
 -->
 {# starter code for trends banner #}
 <style>
     .banner-container-2023 {
-        background-image: url(../../images/trends-banner-large-2023.jpg);
+    {# get asset url #}
+        background-image: url("https://www.letschatsnacks.com/hubfs/2023-Blog-Website-Assets/trends-banner-large-2023.jpg");
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
         display: flex;
+        width: 100%;
         justify-content: flex-end;
         max-width: 1200px;
-        margin: auto;
+        margin: 60px auto 60px;
         min-height: 330px;
     }
     
@@ -25,8 +27,8 @@
 </style>
 
 
-
-<div class="banner-container-wrapper">
+<a href="https://www.mondelezinternationalfoodservice.com/Insights/Trends/five-flavor-and-food-trends-for-2023 " target="_blank ">
+<div class="banner-container-wrapper" data-aos="fade-up">
     <div class="banner-container-2023 container-fluid">
         <div class="banner-cta-panel ">
             <h3>Five Flavor & Food Trends for 2023</h3>
@@ -34,8 +36,5 @@
             <a href="https://www.mondelezinternationalfoodservice.com/Insights/Trends/five-flavor-and-food-trends-for-2023 " target="_blank " class="button ">Get 2023 Trends</a>
         </div>
     </div>
-
-
-
-
 </div>
+</a>
