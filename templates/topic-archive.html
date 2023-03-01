@@ -321,13 +321,7 @@ If we keep search feature in, need to build the search results page.
         </div>
       </div>      
 
-      <div class="container" data-aos="fade-up">
-        <div class="row center-xs">
-          <div class="col-xs-12 col-md-10 center-xs">
-            <img src="https://via.placeholder.com/2000x600" style="max-width: 100%; margin: 60px auto !important;">
-          </div>
-        </div>
-      </div>
+      {% module "module_16776279661113" path="/Templates/Custom/Blog/2023-Theme/modules/Ad Banner", label="Ad Banner" %}
       <div class="container" style="margin: 40px auto">
       {# Subscription banner #}
       <div class="row center-xs">
@@ -348,7 +342,7 @@ If we keep search feature in, need to build the search results page.
           </div>
           <div class="col-xs-12 col-md-4">
           {# Query popular posts #}
-          {{ subscription_banner() }}
+          {% module "module_16776277555377" path="/Templates/Custom/Blog/2023-Theme/modules/Subscription Banner", label="Subscription Banner" %}
         </div>
           
         </div>
