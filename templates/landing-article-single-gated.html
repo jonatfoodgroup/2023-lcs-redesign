@@ -226,8 +226,8 @@ If we keep search feature in, need to build the search results page.
               </div>
               </div>
             <div class="post-related">
-            <h2 style="margin-top: 30px;">Related Articles</h2>
-            {% set data = blog_popular_posts("default", 10, content.tag_list[0]) %} 
+              <h2 style="margin-top: 30px;">Related Articles</h2>
+              {% set data = blog_popular_posts("default", 10, content.tag_list[0]) %} 
               {{ display_posts(data,5) }}
             </div>
 

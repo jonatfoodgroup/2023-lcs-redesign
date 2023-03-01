@@ -227,6 +227,18 @@
                     <p style="font-size: 1.6rem;line-height: 1.4; margin: 0 auto; max-width: 60%;"></b>Your destination for insights, emerging trends and delicious ideas to help grow your business.
                     </p>
                     <button style="margin: 20px auto" class="btn btn--primary">Subscribe Here</button>
+                    {# Slidedown form to subscribe #}
+                    <div class="hidden-form">
+                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                    <script>
+                    hbspt.forms.create({
+                    region: "na1",
+                    portalId: "1714593",
+                    formId: "d8a36810-762a-4153-b305-9ede4823d7c9"
+                  });
+    
+                  </script>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -278,7 +290,7 @@
                 </div>
                 <div class="col-xs-12 col-md-7 col-lg-9">
                   <div class="row" data-aos="fade-in">
-                  {% set data = blog_popular_posts("default", 10, topic.slug) %} 
+                  {% set data = blog_recent_tag_posts("default", topic.slug, 10) %} 
                   {{ display_posts(data,5) }}
                   </div>
                 </div>
