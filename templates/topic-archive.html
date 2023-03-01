@@ -45,6 +45,7 @@ If we keep search feature in, need to build the search results page.
 
 {# GEt the query string vars #}
 {% set query = request.query_dict.topic %}
+  {% set subheadline = request.query_dict.description %}
 
       {# An array to use for capturing all currently visible posts on the page #}
       {% set used_posts = [] %}
@@ -243,39 +244,6 @@ If we keep search feature in, need to build the search results page.
 
 
 {# Main content #}
-  {# Subtopic navigation #}
-  <section class="subtopic-navigation module">
-      <div class="container">
-        <div class="row middle-xs center-xs">
-          <div class="col-xs-12 col-md-4 start-xs">
-            <div class="subtopic-navigation__title">
-              {# <h2>< Back to home / Topics / {{query | capitalize }}</h2> #}
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-8">
-            <div class="subtopic-navigation__links">
-            {# Query subtopics from articles on the page #}
-            {% set subtopics = [] %}
-            {% for post in page.posts %}
-              {% for tag in post.tags %}
-                {% if tag != page.topic %}
-                  {% if tag not in subtopics %}
-                    {% set subtopics = subtopics|merge([tag]) %}
-                  {% endif %}
-                {% endif %}
-              {% endfor %}
-            {% endfor %}
-              <ul>
-                {# Loop through subtopics #}
-                {% for subtopic in subtopics %}
-                  <li><a href="/topics/{{ page.topic }}/{{ subtopic }}">{{ subtopic | capitalize }}</a></li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   <section class="main-content">
   
   {# Include the Topic Curation Module #}
@@ -291,8 +259,8 @@ If we keep search feature in, need to build the search results page.
               <div class="row middle-xs center-xs">
                 <div  class="col-xs-12 center-xs">
                   <h1 style="font-size: 2rem">{{query | capitalize }}</h1>
-                  <p style="font-size: 1.4rem;line-height: 1.2; max-width: 90%; margin: 20px auto;">Welcome to Let’s Chat Snacks, your destination for insights, emerging trends and delicious ideas to help grow your business.</p>
-                  <button style="margin: 20px auto" class="btn btn--primary">Subscribe Here</button>
+                  <p style="font-size: 1.4rem;line-height: 1.2; max-width: 90%; margin: 20px auto;">{{subheadline}}.</p>
+                  <button style="margin: 20px auto" class="btn btn--primary" data-aos="fade-in">Subscribe Here</button>
                 </div>
               </div>
             </div>
@@ -300,7 +268,7 @@ If we keep search feature in, need to build the search results page.
           </div>
         </div>
       </section>
-      <div class="container" style="margin: 0px auto" data-aos="fade-in">
+      <div class="container" style="margin: 0px auto">
         <div class="row">
         <div class="col-xs-12 col-md-3">
               {# <h2>Recommended For You</h2> #}

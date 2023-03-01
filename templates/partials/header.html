@@ -2,6 +2,31 @@
   templateType: global_partial
   label: Website header
 -->
+{% set topicsArr = [
+  {
+    id: "trends",
+    name: "Trends",
+    description: "See which industry trends are hot, which are not, and how you can leverage each to help drive your business forward.",
+    url: "/blog/trends",
+    slug: "trends"
+  },
+  {
+    id: "operations",
+    name: "Operations",
+    description: "Dig into tips and insights from our foodservice industry experts to help you streamline and enhance your service.",
+    url: "/blog/operations",
+    slug: "operations"
+  },
+  {
+    id: "culinary",
+    name: "Culinary",
+    description: "Discover food and flavor trends, exciting menu innovations and delicious inspiration to help you meet consumer demand.",
+    url: "/blog/culinary",
+    slug: "culinary"
+  }
+  ]
+
+%}
 <section class="top-bar">
   <div class="container">
     <div class="row middle-xs">
@@ -36,9 +61,17 @@
       <div class="col-xs-12 col-md-8 col-lg-10 center-xs end-lg">
         <nav>
           <ul class="inline-list">
-            <li><a href="https://www.letschatsnacks.com/test-topic-listing?hs_preview=bJjdEKvO-103710825300&topic=trends">Trends</a></li>
+          {# Loop through topics array and create the nav #}
+            {% for topic in topicsArr %}
+              {% if topic.slug == topic %}
+                <li><a href="{{topic.url}}?hs_preview=bJjdEKvO-103710825300&topic={{topic.slug}}&description={{topic.description}}" class="active">{{topic.name}}</a></li>
+              {% else %}
+                <li><a href="{{topic.url}}?hs_preview=bJjdEKvO-103710825300&topic={{topic.slug}}&description={{topic.description}}">{{topic.name}}</a></li>
+              {% endif %}
+            {% endfor %}
+            {# <li><a href="https://www.letschatsnacks.com/test-topic-listing?hs_preview=bJjdEKvO-103710825300&topic=trends">Trends</a></li>
             <li><a href="https://www.letschatsnacks.com/test-topic-listing?hs_preview=bJjdEKvO-103710825300&topic=operations">Operations</a></li>
-            <li><a href="https://www.letschatsnacks.com/test-topic-listing?hs_preview=bJjdEKvO-103710825300&topic=culinary">Culinary</a></li>
+            <li><a href="https://www.letschatsnacks.com/test-topic-listing?hs_preview=bJjdEKvO-103710825300&topic=culinary">Culinary</a></li> #}
             <li><a href="https://www.mondelezinternationalfoodservice.com/" class="subscribe-btn">Subscribe</a></li>
           </ul>
         </nav>
