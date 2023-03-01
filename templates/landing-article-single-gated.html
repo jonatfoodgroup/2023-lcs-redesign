@@ -232,13 +232,13 @@ If we keep search feature in, need to build the search results page.
             </div>
 
             </div>
-            
           </div>
           {# End content #}
           {# Sidebar #}
           <div class="col-xs-12 col-md-3 col-md-offset-1" id="sidebar">
           <section class="widget">
-                {{ subscription_banner()}}
+                {# Include module Subscription Banner #}
+                  {% module "module_16776277555377" path="/Templates/Custom/Blog/2023-Theme/modules/Subscription Banner", label="Subscription Banner" %}
             
             </section>
             <section class="widget featured-content-slider">
@@ -255,14 +255,6 @@ If we keep search feature in, need to build the search results page.
                 {{ post_list(posts) }}
             </section>
 
-            <section class="widget search">
-                <h2>Find something specific</h2>
-                {# Search by keyword across the hubspot blog #}
-                {% module "search_input" path="@hubspot/search_input" %}
-                  {% module "search_results" path="@hubspot/search_results" %}
-                </section>
-                    
-            </div>
             </section>
             
           </div>
