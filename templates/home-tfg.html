@@ -44,7 +44,7 @@
       {% set used_posts = [] %}
 
       {# Get all posts with a specific tag set #} 
-      {% set tag_posts = blog_recent_tag_posts("default", topics, 12) %} 
+      {% set tag_posts = blog_recent_tag_posts("default", topics, 12,"popular_all_time") %} 
         {% set recent = blog_recent_tag_posts("default", topics,6) %} 
               
       {# Get most popular posts for a specific tag #}
@@ -78,8 +78,10 @@
               {% set delay = delay + 100 %}
 
               {# A permalink to the blog post #}
-              <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">
-                <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%; height: 200px;">
+              <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}" alt="Tap or click to view {{tag_post.name}}" title="Tap or click to view {{tag_post.name}}">
+                {# The featured image for the post #}
+
+                <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%; height: 160px;">
                   {# A hidden image for SEO #}
                   <img
                     src="{{ tag_post.featured_image }}"
@@ -90,10 +92,10 @@
               </a>
               <div class="post-summary">
                   <div class="post-title"><h3><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h3></div>          
-              
-                  <div class="meta-description">
-                    {{tag_post.meta_description|trim|striptags}}
-                  </div>
+                  <p>{{ tag_post.publish_date_local_time|datetimeformat("%B %e, %Y") }}</p>
+                  {# <div class="meta-description"> #}
+                    {# {{tag_post.meta_description|trim|striptags}} #}
+                  {# </div> #}
               </div>
             </div>
             {% endfor %}
@@ -152,11 +154,7 @@
       {% endmacro %}
 
       {% macro single_article(tag_post) %}
-        <div class="row top-xs" style="margin-bottom: 20px;" >
-          <div class="col-xs-12 col-md-12">
-              <div class="post-title"><h3><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h3></div>
-              <p>{{tag_post.publish_date_local_time|datetimeformat("%B %e, %Y") }}</p>
-          </div>
+        <div class="row top-xs"  >
           <div class="col-xs-12 col-md-12">
             <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">
               <div class="featured-image" style="background: url({{ tag_post.featured_image }}) no-repeat center center; background-size: cover; width: 100%;">
@@ -169,9 +167,13 @@
             </a>
           </div>
         </div>
-        <div class="row top-xs" style="margin-bottom: 20px;" >
-          <div class="col-xs-12 col-md-12">
-            {{tag_post.post_summary|striptags}}}}
+        <div class="row top-xs"  >
+            <div class="col-xs-12 col-md-12">
+                <div class="post-title">
+                  <h3><a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">{{ tag_post.name }}</a></h3>
+                </div>
+                <p>{{tag_post.publish_date_local_time|datetimeformat("%B %e, %Y") }}</p>
+            {{tag_post.post_summary|striptags}}
             <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}" class="button">Read More</a>
           </div>
         </div>
@@ -179,7 +181,7 @@
 
       {# Macro - Slick slider #}
       {% macro slick_slider(posts) %}
-        <div class="slick-slider" style="max-width: 90%; margin: 0 auto;">
+        <div class="slick-slider single-image-slider" style=" margin: 0 auto;">
           {% for tag_post in posts %}
             <div class="slick-slide" style="text-align: center">
               <a href="https://www.letschatsnacks.com/test-single-article?hs_preview=iVvsifnO-103909120779&id={{tag_post.id}}">
@@ -214,28 +216,26 @@
   {# End Topic Curation Module #}
 
       <section class="masthead">
-        <div class="container" style="padding: 0px;">
+        <div class="container">
           <div class="row start-xs center-xs">
-
-            <div class="col-xs-12 col-md-7">
-              <div class="bg--white" data-aos="fade-in">  
-              <div class="row middle-xs center-xs">
-                <div  class="col-xs-12 center-xs">
-                  <h1 style="font-size: 2rem">Where Foodservice Operators Feed Success</h1>
-                  <p style="font-size: 1.4rem;line-height: 1.2; max-width: 90%; margin: 0 auto;">Welcome to Let’s Chat Snacks, your destination for insights, emerging trends and delicious ideas to help grow your business.</p>
-                  <div style="margin-top: 40px; text-align: center;">
-                  <button class="btn btn--primary">Subscribe To Let's Chat Snacks</button>
+            <div class="col-xs-12 col-md-9">
+              <div class="bg--white" data-aos="fade-in" data-aos-delay="200">  
+                <div class="row middle-xs center-xs">
+                  <div  class="col-xs-12">
+                    {# <h1>Where Foodservice Operators Feed Success</h1> #}
+                    <h1>Welcome to <br/>Let’s Chat Snacks!</h1>
+                    <p style="font-size: 1.6rem;line-height: 1.4; margin: 0 auto; max-width: 60%;"></b>Your destination for insights, emerging trends and delicious ideas to help grow your business.
+                    </p>
+                    <button style="margin: 20px auto" class="btn btn--primary">Subscribe Here</button>
                   </div>
-                  <div style="clear: both"></div>
                 </div>
               </div>
-            </div>
             </div>            
           </div>
         </div>
       </section>
 
-      <div class="container" style="margin: 40px auto">
+      <div class="container" style="margin: 0px auto" data-aos="fade-in">
         <div class="row">
            <div class="col-xs-12 col-md-3">
               {# <h2>Latest</h2> #}
@@ -262,15 +262,21 @@
         <div class="row">
           <div class="col-xs-12 col-md-12">
             {% for topic in topicsArr %}
+              {# If even, change class #}
+              {% set index = loop.index %}
+              {% if (index % 2) == 0 %}
+                {% set class = "even" %}
+              {% else %}
+                {% set class = "odd" %}
+              {% endif %}
               <div class="row topic-curation" data-aos="fade-up">
-                <div class="col-xs-12 col-md-3">
+                <div class="col-xs-12 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-0">
                   <h3>Explore</h3>
                   <h4 class="topic-curation__title">{{ topic.slug | capitalize }}</h4>
                   <p class="topic-curation__summary">{{topic.description}}</p>
-                  {# Button to view all posts for topic #}
                   <a href="https://www.letschatsnacks.com/test-topic-listing?hs_preview=bJjdEKvO-103710825300&topic={{topic.slug}}" class="button">View all {{ topic.slug | capitalize }} posts</a>
                 </div>
-                <div class="col-xs-12 col-md-8 col-md-offset-1">
+                <div class="col-xs-12 col-md-7 col-lg-9">
                   <div class="row" data-aos="fade-in">
                   {% set data = blog_popular_posts("default", 10, topic.slug) %} 
                   {{ display_posts(data,5) }}
@@ -284,7 +290,7 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-12 col-lg-offset-0">
             <div class="row">
             <h1>Popular: What We're Snacking On</h1>
             {{ display_posts(recent,10) }}
